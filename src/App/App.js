@@ -8,6 +8,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 import firebaseConnection from '../helpers/data/connection';
+import MyNavBar from '../components/shared/MyNavBar/MyNavBar';
 
 import Auth from '../components/pages/Auth/Auth';
 import AllPosts from '../components/pages/AllPosts/AllPosts';
@@ -47,6 +48,7 @@ class App extends React.Component {
     return (
     <div className="App">
       <Router>
+        <MyNavBar authed={authed} />
         <Switch>
           <PrivateRoute path="/" exact component={AllPosts} authed={authed}/>
           <PublicRoute path="/auth" exact component={Auth} authed={authed}/>
