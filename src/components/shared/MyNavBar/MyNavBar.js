@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import PropTypes from 'prop-types';
 
 import firebase from 'firebase/app';
@@ -19,19 +21,37 @@ class MyNavBar extends React.Component {
 
   render() {
     const { authed } = this.props;
+    const buildNavBar = () => {
+      if (authed) {
+        return (
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item">
+            <Link className="nav-link" to="/posts/all">All Posts</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/posts/create">Create Post</Link>
+          </li>
+          <li className="nav-item">
+            <button className="nav-link btn btn-danger" onClick={this.logMeOut}>Logout</button>
+          </li>
+        </ul>
+        );
+      }
+
+      return (<ul className="navbar-nav ml-auto"></ul>);
+    };
+
     return (
       <div className="MyNavBar">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="/">writersResort</a>
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <Link className="navbar-brand" to="/">writersResort</Link>
+              <Link className="navbar-brand" to="/about">About</Link>
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto mt-lg-0"></ul>
-            <div className="my-2 mt-lg-0">
-              {authed && (<button className="nav-link btn btn-danger" onClick={this.logMeOut}>Logout</button>)}
-            </div>
+          { buildNavBar() }
           </div>
         </nav>
       </div>

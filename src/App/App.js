@@ -10,8 +10,14 @@ import 'firebase/auth';
 import firebaseConnection from '../helpers/data/connection';
 import MyNavBar from '../components/shared/MyNavBar/MyNavBar';
 
+import About from '../components/pages/About/About';
 import Auth from '../components/pages/Auth/Auth';
 import AllPosts from '../components/pages/AllPosts/AllPosts';
+import Create from '../components/pages/Create/Create';
+import Feedback from '../components/pages/Feedback/Feedback';
+// import Logout from '../components/pages/Logout/Logout';
+import Update from '../components/pages/Update/Update';
+
 
 const PublicRoute = ({ component: Component, authed, ...rest }) => {
   const routeChecker = (props) => (authed === false ? <Component {...props} {...rest}/> : <Redirect to={{ pathname: '/', state: { from: props.location } }} />);
@@ -50,9 +56,14 @@ class App extends React.Component {
       <Router>
         <MyNavBar authed={authed} />
         <Switch>
-          <PrivateRoute path="/" exact component={AllPosts} authed={authed}/>
+          <PublicRoute path="/about" exact component={About} authed={authed}/>
           <PublicRoute path="/auth" exact component={Auth} authed={authed}/>
-          {/* <PrivateRoute path="/AllPosts" exact component={AllPosts} authed={authed}/> */}
+          <PrivateRoute path="/about" exact component={About} authed={authed}/>
+          <PrivateRoute path="/" exact component={AllPosts} authed={authed}/>
+          <PrivateRoute path="/posts/all" exact component={AllPosts} authed={authed}/>
+          <PrivateRoute path="/posts/create" exact component={Create} authed={authed}/>
+          <PrivateRoute path="/posts/:postId/feedback" exact component={Feedback} authed={authed}/>
+          <PrivateRoute path="/posts/:postId/update" exact component={Update} authed={authed}/>
         </Switch>
       </Router>
     </div>
