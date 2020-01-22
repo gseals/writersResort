@@ -15,7 +15,7 @@ import Auth from '../components/pages/Auth/Auth';
 import AllPosts from '../components/pages/AllPosts/AllPosts';
 import Create from '../components/pages/Create/Create';
 import Feedback from '../components/pages/Feedback/Feedback';
-// import Logout from '../components/pages/Logout/Logout';
+import Logout from '../components/pages/Logout/Logout';
 import Update from '../components/pages/Update/Update';
 
 
@@ -56,14 +56,14 @@ class App extends React.Component {
       <Router>
         <MyNavBar authed={authed} />
         <Switch>
-          <PublicRoute path="/about" exact component={About} authed={authed}/>
           <PublicRoute path="/auth" exact component={Auth} authed={authed}/>
-          <PrivateRoute path="/about" exact component={About} authed={authed}/>
+          <PublicRoute path="/logout" exact component={Logout} authed={authed}/>
+          <Route path="/about" exact component={About} authed={authed}/>
           <PrivateRoute path="/" exact component={AllPosts} authed={authed}/>
           <PrivateRoute path="/posts/all" exact component={AllPosts} authed={authed}/>
           <PrivateRoute path="/posts/create" exact component={Create} authed={authed}/>
-          <PrivateRoute path="/posts/:postId/feedback" exact component={Feedback} authed={authed}/>
-          <PrivateRoute path="/posts/:postId/update" exact component={Update} authed={authed}/>
+          <PrivateRoute path="/posts/:postPathId/feedback" exact component={Feedback} authed={authed}/>
+          <PrivateRoute path="/posts/:postPathId/update" exact component={Update} authed={authed}/>
         </Switch>
       </Router>
     </div>
