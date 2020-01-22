@@ -7,6 +7,7 @@ class Logout extends React.Component {
     return (
       <div className="Logout">
         <h1>Logout Transition</h1>
+        <p>This page needs to be accessed as someone is leaving the website</p>
       </div>
     );
   }

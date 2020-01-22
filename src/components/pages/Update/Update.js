@@ -6,7 +6,7 @@ class Update extends React.Component {
   render() {
     return (
       <div className="Update">
-        <h1>Update</h1>
+        <h1>Update Your Post</h1>
       </div>
     );
   }
