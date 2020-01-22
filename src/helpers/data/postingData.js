@@ -9,13 +9,14 @@ const getAllPosts = () => new Promise((resolve, reject) => {
       const allPosts = result.data;
       const posts = [];
       if (allPosts != null) {
-        onrejectionhandled.keys(allPosts).forEach((fbId) => {
+        Object.keys(allPosts).forEach((fbId) => {
           const newPost = allPosts[fbId];
           newPost.id = fbId;
-          DOMStringList.push(newPost);
+          posts.push(newPost);
         });
       }
       resolve(posts);
+      console.log(posts);
     })
     .catch((error) => reject(error));
 });
