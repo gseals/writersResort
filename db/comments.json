@@ -1,0 +1,52 @@
+{
+  "comment1": {
+    "postId": "post1",
+    "content": "Rad!",
+    "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
+  },
+  "comment2": {
+  "postId": "post1",
+  "content": "Superb!",
+  "uid": "12345"
+  },
+  "comment3": {
+  "postId": "post2",
+  "content": "Bomber!",
+  "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
+  },
+  "comment4": {
+  "postId": "post2",
+  "content": "Lit!",
+  "uid": "12345"
+  },
+  "comment5": {
+  "postId": "post3",
+  "content": "Roll out, bro!",
+  "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
+  },
+  "comment6": {
+  "postId": "post3",
+  "content": "Rad!",
+  "uid": "12345"
+  },
+  "comment7": {
+  "postId": "post4",
+  "content": "Superb!",
+  "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
+  },
+  "comment8": {
+  "postId": "post4",
+  "content": "Bomber!",
+  "uid": "12345"
+  },
+  "comment9": {
+  "postId": "post5",
+  "content": "Lit!",
+  "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
+  },
+  "comment10": {
+  "postId": "post5",
+  "content": "Roll out, bro!",
+  "uid": "12345"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "post1": {
+  "feedbackType": "New",
+  "goal": "Journal1",
+  "bodyText": "These hearts",
+  "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
+  },
+  "post2": {
+    "feedbackType": "subjectLine",
+    "goal": "Journal2",
+    "bodyText": "These eyes",
+    "uid": "12345"
+  },
+  "post3": {
+    "feedbackType": "subjectLine",
+    "goal": "Journal3",
+    "bodyText": "These lungs",
+    "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
+  },
+  "post4": {
+    "feedbackType": "subjectLine",
+    "goal": "Journal4",
+    "bodyText": "these times",
+    "uid": "12345"
+  },
+  "post5": {
+    "feedbackType": "subjectLine",
+    "goal": "Journal5",
+    "bodyText": "these letters",
+    "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
+  }
+}
