@@ -3,7 +3,7 @@ import apiKeys from '../apiKeys.json';
 
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
-const getAllPosts = () => new Promise((resolve, reject) => {
+const getAllPostsData = () => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/allPostings.json`)
     .then((result) => {
       const allPosts = result.data;
@@ -16,9 +16,10 @@ const getAllPosts = () => new Promise((resolve, reject) => {
         });
       }
       resolve(posts);
-      console.log(posts);
     })
     .catch((error) => reject(error));
 });
 
-export default { getAllPosts };
+const deletePostsData = (postId) => axios.delete(`${baseUrl}/allPostings/${postId}.json`);
+
+export default { getAllPostsData, deletePostsData };
