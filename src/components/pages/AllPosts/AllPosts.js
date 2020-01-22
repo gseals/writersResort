@@ -9,14 +9,20 @@ class AllPosts extends React.Component {
     posts: [],
   }
 
-  getPostData = () => {
-    postingData.getAllPosts()
+  getPostDataComponent = () => {
+    postingData.getAllPostsData()
       .then((posts) => this.setState({ posts }))
       .catch((err) => console.error('error in get items'));
   }
 
   componentDidMount() {
-    this.getPostData();
+    this.getPostDataComponent();
+  }
+
+  deletePostComponent = (postId) => {
+    postingData.deletePostsData(postId)
+      .then(() => this.getPostDataComponent())
+      .catch((err) => console.error('error from deleting posts', err));
   }
 
   render() {
@@ -25,7 +31,7 @@ class AllPosts extends React.Component {
         <h1>All Posts</h1>
         <h4>These could use your feedback. Press See Full Post to leave a Comment</h4>
         <div className="post d-flex flex-wrap">
-          { this.state.posts.map((post) => <SinglePost key={post.id} post={post}/>)}
+          { this.state.posts.map((post) => <SinglePost key={post.id} post={post} deletePostComponent={this.deletePostComponent}/>)}
         </div>
       </div>
     );
