@@ -27,6 +27,13 @@ class Feedback extends React.Component {
       .catch((err) => console.error('error in get single board', err));
   }
 
+  deleteCommentComponent = (commentId) => {
+    const { postPathId } = this.props.match.params;
+    commentData.deleteCommentData(commentId)
+      .then(() => this.getCommentDataComponent(postPathId))
+      .catch((err) => console.error('error from deleting comments', err));
+  }
+
   render() {
     const { post } = this.state;
 
@@ -35,7 +42,7 @@ class Feedback extends React.Component {
         <h1>Feedback</h1>
         <h2>{post.feedbackType}</h2>
         <div className="comments d-flex flex-wrap">
-          { this.state.comments.map((comment) => <Comments key={comment.id} comment={comment}/>)}
+          { this.state.comments.map((comment) => <Comments key={comment.id} comment={comment} deleteCommentComponent={this.deleteCommentComponent}/>)}
         </div>
       </div>
     );

@@ -20,4 +20,6 @@ const getCommentsByPostingIdData = (postId) => new Promise((resolve, reject) => 
     .catch((error) => reject(error));
 });
 
-export default { getCommentsByPostingIdData };
+const deleteCommentData = (commentId) => axios.delete(`${baseUrl}/comments/${commentId}.json`);
+
+export default { getCommentsByPostingIdData, deleteCommentData };
