@@ -3,8 +3,8 @@ import apiKeys from '../apiKeys.json';
 
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
-const getAllCommentsData = () => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/comments.json`)
+const getCommentsByPostingIdData = (postId) => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/comments.json?orderBy="postId"&equalTo="${postId}"`)
     .then((result) => {
       const allComments = result.data;
       const comments = [];
@@ -20,4 +20,4 @@ const getAllCommentsData = () => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export default { getAllCommentsData };
+export default { getCommentsByPostingIdData };
