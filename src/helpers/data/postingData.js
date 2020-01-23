@@ -20,6 +20,8 @@ const getAllPostsData = () => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+const getSinglePostData = (postId) => axios.get(`${baseUrl}/allPostings/${postId}.json`);
+
 const deletePostsData = (postId) => axios.delete(`${baseUrl}/allPostings/${postId}.json`);
 
-export default { getAllPostsData, deletePostsData };
+export default { getAllPostsData, getSinglePostData, deletePostsData };
