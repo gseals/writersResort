@@ -26,9 +26,12 @@ const deletePostsData = (postId) => axios.delete(`${baseUrl}/allPostings/${postI
 
 const savePosting = (newPosting) => axios.post(`${baseUrl}/allPostings.json`, newPosting);
 
+const editPostingData = (postId, editPost) => axios.put(`${baseUrl}/allPostings/${postId}.json`, editPost);
+
 export default {
   getAllPostsData,
   getSinglePostData,
   deletePostsData,
   savePosting,
+  editPostingData,
 };
