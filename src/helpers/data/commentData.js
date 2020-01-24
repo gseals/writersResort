@@ -22,4 +22,6 @@ const getCommentsByPostingIdData = (postId) => new Promise((resolve, reject) => 
 
 const deleteCommentData = (commentId) => axios.delete(`${baseUrl}/comments/${commentId}.json`);
 
-export default { getCommentsByPostingIdData, deleteCommentData };
+const saveComment = (newComment) => axios.post(`${baseUrl}/comments.json`, newComment);
+
+export default { getCommentsByPostingIdData, deleteCommentData, saveComment };
