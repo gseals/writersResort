@@ -24,4 +24,11 @@ const getSinglePostData = (postId) => axios.get(`${baseUrl}/allPostings/${postId
 
 const deletePostsData = (postId) => axios.delete(`${baseUrl}/allPostings/${postId}.json`);
 
-export default { getAllPostsData, getSinglePostData, deletePostsData };
+const savePosting = (newPosting) => axios.post(`${baseUrl}/allPostings.json`, newPosting);
+
+export default {
+  getAllPostsData,
+  getSinglePostData,
+  deletePostsData,
+  savePosting,
+};
