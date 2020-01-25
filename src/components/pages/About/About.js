@@ -6,7 +6,7 @@ class About extends React.Component {
   render() {
     return (
       <div className="About">
-        <h1>About</h1>
+        <h1 className="textColor">About</h1>
       </div>
     );
   }
