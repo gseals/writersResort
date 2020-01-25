@@ -76,16 +76,16 @@ class Feedback extends React.Component {
       .catch((err) => console.error('error from update comment', err));
   }
 
-  // editCommentFunctionInShared = (e) => {
-  //   e.preventDefault();
-  //   const {  } = this.props.match.params;
-  //   commentData.getSingleCommentData(commentId)
-  //     .then((request) => {
-  //       const comment = request.data;
-  //       this.setState({ newContent: comment.content });
-  //     })
-  //     .catch((err) => console.error('error with get single comment', err));
-  // }
+  editCommentFunctionInShared = (e) => {
+    const commentId = e;
+    console.log(commentId);
+    commentData.getSingleCommentData(commentId)
+      .then((request) => {
+        const comment = request.data;
+        this.setState({ newContent: comment.content });
+      })
+      .catch((err) => console.error('error with get single comment', err));
+  }
 
   render() {
     const { post, newContent } = this.state;
@@ -96,7 +96,7 @@ class Feedback extends React.Component {
         <h1>Feedback</h1>
         <h2>{post.feedbackType}</h2>
         <div className="comments col">
-          { this.state.comments.map((comment) => <Comments key={comment.id} comment={comment} deleteCommentComponent={this.deleteCommentComponent} editCommentFunction={this.editCommentFunction}/>)}
+          { this.state.comments.map((comment) => <Comments key={comment.id} comment={comment} deleteCommentComponent={this.deleteCommentComponent} editCommentFunctionInShared={this.editCommentFunctionInShared}/>)}
         </div>
         <div className="col">
         <form className="CommentForm">
@@ -112,8 +112,8 @@ class Feedback extends React.Component {
           />
             </div>
             { postPathId
-              ? <button className="btn btn-success" onClick={this.saveCommentEvent}>Comment</button>
-              : <button className="btn btn-success" onClick={this.editCommentEvent}>Update</button>
+              ? <button className="btn btn-success" onClick={this.editCommentEvent}>Update</button>
+              : <button className="btn btn-success" onClick={this.saveCommentEvent}>Comment</button>
             }
           </form>
         </div>
