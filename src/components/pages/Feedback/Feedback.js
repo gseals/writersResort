@@ -94,11 +94,19 @@ class Feedback extends React.Component {
     return (
       <div className="Feedback">
         <h1>Feedback</h1>
+        <div className="row">
+        <div className="col">
         <h2>{post.feedbackType}</h2>
+        <h2>{post.goal}</h2>
+        <h2>{post.bodyText}</h2>
+        </div>
         <div className="comments col">
+          <h2>Comments</h2>
           { this.state.comments.map((comment) => <Comments key={comment.id} comment={comment} deleteCommentComponent={this.deleteCommentComponent} editCommentFunctionInShared={this.editCommentFunctionInShared}/>)}
         </div>
         <div className="col">
+          <h2>What do you think?</h2>
+          <h2>Any Advice?</h2>
         <form className="CommentForm">
         <div className="form-group">
           <label htmlFor="new-content"></label>
@@ -106,7 +114,7 @@ class Feedback extends React.Component {
           type="textarea"
           className="form-control"
           id="new-content"
-          placeholder="Leave a comment?"
+          placeholder="Leave a comment"
           value={newContent}
           onChange={this.createComment}
           />
@@ -117,6 +125,7 @@ class Feedback extends React.Component {
             }
           </form>
         </div>
+      </div>
       </div>
     );
   }

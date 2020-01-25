@@ -83,7 +83,7 @@ class Create extends React.Component {
           required
           />
         </div>
-    <button type="submit" className="btn btn-success" onSubmit={this.savePostingEvent}>Post</button>
+    <button type="submit" className="btn btn-success">Post</button>
       </form>
       </div>
       );

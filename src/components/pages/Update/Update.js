@@ -93,7 +93,7 @@ class Update extends React.Component {
             required
             />
           </div>
-          <button type="submit" className="btn btn-success" onSubmit={this.editPostEvent}>Update</button>
+          <button type="submit" className="btn btn-success">Update</button>
         </div>
        </div>
       </form>
