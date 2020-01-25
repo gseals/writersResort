@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import postingShape from '../../../helpers/propz/postingShape';
+import authData from '../../../helpers/data/authData';
 
 import './SinglePost.scss';
 
@@ -25,9 +26,13 @@ class SinglePost extends React.Component {
         <div className="card">
           <div className="card-body">
           <h3 className="card-title">{post.feedbackType}</h3>
-          <button className="btn btn-danger" onClick={this.handleDeletePostEvent}>X</button>
           <Link className="btn btn-primary" to={`/posts/${postPathId}/feedback`}>See Full Post</Link>
+          {
+            (post.uid === authData.getUid()) && <div>
+          <button className="btn btn-danger" onClick={this.handleDeletePostEvent}>X</button>
           <Link className="btn btn-primary" to={`/posts/${postPathId}/update`}>Edit</Link>
+          </div>
+          }
           </div>
         </div>
       </div>
