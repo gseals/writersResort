@@ -3,7 +3,7 @@ import commentData from '../../../helpers/data/commentData';
 import postingData from '../../../helpers/data/postingData';
 import Comments from '../../shared/Comments/Comments';
 import authData from '../../../helpers/data/authData';
-import SinglePost from '../../shared/SinglePost/SinglePost';
+// import SinglePost from '../../shared/SinglePost/SinglePost';
 import './Feedback.scss';
 
 class Feedback extends React.Component {
@@ -12,6 +12,8 @@ class Feedback extends React.Component {
     comments: [],
     newContent: '',
     postPathId: '',
+    commentId: '',
+    editMode: false,
   }
 
   // this function places comments on the page
@@ -65,31 +67,38 @@ class Feedback extends React.Component {
   editCommentEvent = (e) => {
     e.preventDefault();
     const { postPathId } = this.props.match.params;
+    const { commentId } = this.state;
+    console.log('commentId test', commentId);
     const updateComment = {
       postId: postPathId,
       content: this.state.newContent,
       uid: authData.getUid(),
     };
-    commentData.editCommentData(postPathId, updateComment)
-      .then(() => this.getCommentDataComponent(postPathId))
-      .then(() => this.setState({ newContent: '' }))
-      .catch((err) => console.error('error from update comment', err));
-  }
+    commentData.getSingleCommentData(commentId)
+      .then((request) => {
+        if (document.getElementById('new-content').value === request.data.content) {
+          alert('Your comment didn\'t change.');
+        } else {
+          commentData.editCommentData(commentId, updateComment)
+            .then(() => this.getCommentDataComponent(postPathId))
+            .then(() => this.setState({ newContent: '', editMode: false }));
+        }
+      })
+      .catch((err) => console.error('error with get edit comment', err));
+  };
 
   editCommentFunctionInShared = (e) => {
     const commentId = e;
-    console.log(commentId);
     commentData.getSingleCommentData(commentId)
       .then((request) => {
         const comment = request.data;
-        this.setState({ newContent: comment.content });
+        this.setState({ newContent: comment.content, editMode: true, commentId: e });
       })
       .catch((err) => console.error('error with get single comment', err));
   }
 
   render() {
-    const { post, newContent } = this.state;
-    const { postPathId } = this.props.match.params;
+    const { post, newContent, editMode } = this.state;
 
     return (
       <div className="Feedback">
@@ -107,7 +116,7 @@ class Feedback extends React.Component {
         <div className="col">
           <h2>What do you think?</h2>
           <h2>Any Advice?</h2>
-        <form className="CommentForm">
+        <form onSubmit={editMode ? this.editCommentEvent : this.saveCommentEvent} className="CommentForm">
         <div className="form-group">
           <label htmlFor="new-content"></label>
           <input
@@ -117,12 +126,10 @@ class Feedback extends React.Component {
           placeholder="Leave a comment"
           value={newContent}
           onChange={this.createComment}
+          required
           />
             </div>
-            { postPathId
-              ? <button className="btn btn-success" onClick={this.editCommentEvent}>Update</button>
-              : <button className="btn btn-success" onClick={this.saveCommentEvent}>Comment</button>
-            }
+              <button type="submit" className="btn btn-success">{editMode ? 'Update' : 'Comment'}</button>
           </form>
         </div>
       </div>
