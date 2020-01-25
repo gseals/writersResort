@@ -3,6 +3,7 @@ import React from 'react';
 import SinglePost from '../../shared/SinglePost/SinglePost';
 import postingData from '../../../helpers/data/postingData';
 import './AllPosts.scss';
+import commentData from '../../../helpers/data/commentData';
 
 class AllPosts extends React.Component {
   state = {
@@ -21,7 +22,12 @@ class AllPosts extends React.Component {
 
   deletePostComponent = (postId) => {
     postingData.deletePostsData(postId)
-      .then(() => this.getPostDataComponent())
+      .then(() => {
+        this.getPostDataComponent();
+        commentData.getCommentsByPostingIdData(postId).then((comments) => {
+          comments.forEach((comment) => commentData.deleteCommentData(comment.id));
+        });
+      })
       .catch((err) => console.error('error from deleting posts', err));
   }
 

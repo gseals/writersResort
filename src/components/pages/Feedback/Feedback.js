@@ -3,7 +3,7 @@ import commentData from '../../../helpers/data/commentData';
 import postingData from '../../../helpers/data/postingData';
 import Comments from '../../shared/Comments/Comments';
 import authData from '../../../helpers/data/authData';
-import SinglePost from '../../shared/SinglePost/SinglePost';
+// import SinglePost from '../../shared/SinglePost/SinglePost';
 import './Feedback.scss';
 
 class Feedback extends React.Component {
@@ -11,14 +11,19 @@ class Feedback extends React.Component {
     post: {},
     comments: [],
     newContent: '',
+    postPathId: '',
+    commentId: '',
+    editMode: false,
   }
 
+  // this function places comments on the page
   getCommentDataComponent = (postId) => {
     commentData.getCommentsByPostingIdData(postId)
       .then((comments) => this.setState({ comments }))
       .catch((err) => console.error('error in get comments', err));
   }
 
+  // ensures that when page loads, the above function fires and displays the singles post along with comment
   componentDidMount() {
     const { postPathId } = this.props.match.params;
     postingData.getSinglePostData(postPathId)
@@ -29,6 +34,7 @@ class Feedback extends React.Component {
       .catch((err) => console.error('error in get single board', err));
   }
 
+  // delete comments
   deleteCommentComponent = (commentId) => {
     const { postPathId } = this.props.match.params;
     commentData.deleteCommentData(commentId)
@@ -36,11 +42,13 @@ class Feedback extends React.Component {
       .catch((err) => console.error('error from deleting comments', err));
   }
 
+  // tells the created comment what to do
   createComment = (e) => {
     e.preventDefault();
     this.setState({ newContent: e.target.value });
   }
 
+  // saves a new comment
   saveCommentEvent = (e) => {
     e.preventDefault();
     const { postPathId } = this.props.match.params;
@@ -55,32 +63,76 @@ class Feedback extends React.Component {
       .catch((err) => console.error('error from save comment', err));
   }
 
+  // WIP
+  editCommentEvent = (e) => {
+    e.preventDefault();
+    const { postPathId } = this.props.match.params;
+    const { commentId } = this.state;
+    console.log('commentId test', commentId);
+    const updateComment = {
+      postId: postPathId,
+      content: this.state.newContent,
+      uid: authData.getUid(),
+    };
+    commentData.getSingleCommentData(commentId)
+      .then((request) => {
+        if (document.getElementById('new-content').value === request.data.content) {
+          alert('Your comment didn\'t change.');
+        } else {
+          commentData.editCommentData(commentId, updateComment)
+            .then(() => this.getCommentDataComponent(postPathId))
+            .then(() => this.setState({ newContent: '', editMode: false }));
+        }
+      })
+      .catch((err) => console.error('error with get edit comment', err));
+  };
+
+  editCommentFunctionInShared = (e) => {
+    const commentId = e;
+    commentData.getSingleCommentData(commentId)
+      .then((request) => {
+        const comment = request.data;
+        this.setState({ newContent: comment.content, editMode: true, commentId: e });
+      })
+      .catch((err) => console.error('error with get single comment', err));
+  }
+
   render() {
-    const { post, newContent } = this.state;
+    const { post, newContent, editMode } = this.state;
 
     return (
       <div className="Feedback">
         <h1>Feedback</h1>
+        <div className="row">
+        <div className="col">
         <h2>{post.feedbackType}</h2>
+        <h2>{post.goal}</h2>
+        <h2>{post.bodyText}</h2>
+        </div>
         <div className="comments col">
-          { this.state.comments.map((comment) => <Comments key={comment.id} comment={comment} deleteCommentComponent={this.deleteCommentComponent}/>)}
+          <h2>Comments</h2>
+          { this.state.comments.map((comment) => <Comments key={comment.id} comment={comment} deleteCommentComponent={this.deleteCommentComponent} editCommentFunctionInShared={this.editCommentFunctionInShared}/>)}
         </div>
         <div className="col">
-        <form className="CommentForm">
+          <h2>What do you think?</h2>
+          <h2>Any Advice?</h2>
+        <form onSubmit={editMode ? this.editCommentEvent : this.saveCommentEvent} className="CommentForm">
         <div className="form-group">
           <label htmlFor="new-content"></label>
           <input
           type="textarea"
           className="form-control"
           id="new-content"
-          placeholder="Leave a comment?"
+          placeholder="Leave a comment"
           value={newContent}
           onChange={this.createComment}
+          required
           />
             </div>
-            <button className="btn btn-success" onClick={this.saveCommentEvent}>Comment</button>
+              <button type="submit" className="btn btn-success">{editMode ? 'Update' : 'Comment'}</button>
           </form>
         </div>
+      </div>
       </div>
     );
   }

@@ -20,7 +20,7 @@ class Update extends React.Component {
           const post = request.data;
           this.setState({ updateFeedbackType: post.feedbackType, updateGoal: post.goal, updateBodyText: post.bodyText });
         })
-        .catch((err) => console.error('error with get single item', err));
+        .catch((err) => console.error('error with get single post', err));
     }
   }
 
@@ -58,7 +58,7 @@ class Update extends React.Component {
       return (
       <div className="Update">
         <h1>Update Your Post</h1>
-        <form className="Update col-6 m-auto">
+        <form onSubmit={this.editPostEvent}className="Update col-6 m-auto">
        <div className="form-group">
          <h3><label htmlFor="updateFeedback"></label></h3>
          <input
@@ -68,6 +68,7 @@ class Update extends React.Component {
          placeholder="Update Feedback"
          value={updateFeedbackType}
          onChange={this.editFeedback}
+         required
         />
         <div className="form-group">
           <h3><label htmlFor="update-goal"></label></h3>
@@ -78,6 +79,7 @@ class Update extends React.Component {
           placeholder="Update Goal"
           value={updateGoal}
           onChange={this.editGoal}
+          required
           />
           <div className="form-group">
             <h3><label htmlFor="update-body"></label></h3>
@@ -85,12 +87,13 @@ class Update extends React.Component {
             type="textarea"
             className="form-control"
             id="update-body"
-            placeholder="Update Item Description"
+            placeholder="Update Text"
             value={updateBodyText}
             onChange={this.editBodyText}
+            required
             />
           </div>
-          <button className="btn btn-success" onClick={this.editPostEvent}>Update</button>
+          <button type="submit" className="btn btn-success">Update</button>
         </div>
        </div>
       </form>

@@ -20,8 +20,18 @@ const getCommentsByPostingIdData = (postId) => new Promise((resolve, reject) => 
     .catch((error) => reject(error));
 });
 
+const getSingleCommentData = (commentId) => axios.get(`${baseUrl}/comments/${commentId}.json`);
+
 const deleteCommentData = (commentId) => axios.delete(`${baseUrl}/comments/${commentId}.json`);
 
 const saveComment = (newComment) => axios.post(`${baseUrl}/comments.json`, newComment);
 
-export default { getCommentsByPostingIdData, deleteCommentData, saveComment };
+const editCommentData = (commentId, updateComment) => axios.put(`${baseUrl}/comments/${commentId}.json`, updateComment);
+
+export default {
+  getCommentsByPostingIdData,
+  getSingleCommentData,
+  deleteCommentData,
+  saveComment,
+  editCommentData,
+};
