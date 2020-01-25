@@ -11,14 +11,17 @@ class Feedback extends React.Component {
     post: {},
     comments: [],
     newContent: '',
+    postPathId: '',
   }
 
+  // this function places comments on the page
   getCommentDataComponent = (postId) => {
     commentData.getCommentsByPostingIdData(postId)
       .then((comments) => this.setState({ comments }))
       .catch((err) => console.error('error in get comments', err));
   }
 
+  // ensures that when page loads, the above function fires and displays the singles post along with comment
   componentDidMount() {
     const { postPathId } = this.props.match.params;
     postingData.getSinglePostData(postPathId)
@@ -29,6 +32,7 @@ class Feedback extends React.Component {
       .catch((err) => console.error('error in get single board', err));
   }
 
+  // delete comments
   deleteCommentComponent = (commentId) => {
     const { postPathId } = this.props.match.params;
     commentData.deleteCommentData(commentId)
@@ -36,11 +40,13 @@ class Feedback extends React.Component {
       .catch((err) => console.error('error from deleting comments', err));
   }
 
+  // tells the created comment what to do
   createComment = (e) => {
     e.preventDefault();
     this.setState({ newContent: e.target.value });
   }
 
+  // saves a new comment
   saveCommentEvent = (e) => {
     e.preventDefault();
     const { postPathId } = this.props.match.params;
@@ -55,15 +61,42 @@ class Feedback extends React.Component {
       .catch((err) => console.error('error from save comment', err));
   }
 
+  // WIP
+  editCommentEvent = (e) => {
+    e.preventDefault();
+    const { postPathId } = this.props.match.params;
+    const updateComment = {
+      postId: postPathId,
+      content: this.state.newContent,
+      uid: authData.getUid(),
+    };
+    commentData.editCommentData(postPathId, updateComment)
+      .then(() => this.getCommentDataComponent(postPathId))
+      .then(() => this.setState({ newContent: '' }))
+      .catch((err) => console.error('error from update comment', err));
+  }
+
+  // editCommentFunctionInShared = (e) => {
+  //   e.preventDefault();
+  //   const {  } = this.props.match.params;
+  //   commentData.getSingleCommentData(commentId)
+  //     .then((request) => {
+  //       const comment = request.data;
+  //       this.setState({ newContent: comment.content });
+  //     })
+  //     .catch((err) => console.error('error with get single comment', err));
+  // }
+
   render() {
     const { post, newContent } = this.state;
+    const { postPathId } = this.props.match.params;
 
     return (
       <div className="Feedback">
         <h1>Feedback</h1>
         <h2>{post.feedbackType}</h2>
         <div className="comments col">
-          { this.state.comments.map((comment) => <Comments key={comment.id} comment={comment} deleteCommentComponent={this.deleteCommentComponent}/>)}
+          { this.state.comments.map((comment) => <Comments key={comment.id} comment={comment} deleteCommentComponent={this.deleteCommentComponent} editCommentFunction={this.editCommentFunction}/>)}
         </div>
         <div className="col">
         <form className="CommentForm">
@@ -78,7 +111,10 @@ class Feedback extends React.Component {
           onChange={this.createComment}
           />
             </div>
-            <button className="btn btn-success" onClick={this.saveCommentEvent}>Comment</button>
+            { postPathId
+              ? <button className="btn btn-success" onClick={this.saveCommentEvent}>Comment</button>
+              : <button className="btn btn-success" onClick={this.editCommentEvent}>Update</button>
+            }
           </form>
         </div>
       </div>

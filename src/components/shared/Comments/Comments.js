@@ -8,12 +8,20 @@ class Comments extends React.Component {
   static propTypes = {
     comment: commentShape.commentShape,
     deleteCommentComponent: PropTypes.func,
+    editCommentFunction: PropTypes.func,
+
   }
 
   handleDeleteCommentEvent = (e) => {
     e.preventDefault();
     const { deleteCommentComponent, comment } = this.props;
     deleteCommentComponent(comment.id);
+  }
+
+  handleEditFunction = (e) => {
+    e.preventDefault();
+    const { editCommentFunction, comment } = this.props;
+    editCommentFunction(comment.id);
   }
 
   render() {
@@ -24,7 +32,7 @@ class Comments extends React.Component {
           <div className="card-body">
             <h3 className="card-title">{comment.content}</h3>
             <button className="btn btn-danger" onClick={this.handleDeleteCommentEvent}>X</button>
-            <button className="btn btn-primary">Edit</button>
+            <button className="btn btn-primary"onClick={this.handleEditCommentEvent}>Edit</button>
           </div>
         </div>
       </div>

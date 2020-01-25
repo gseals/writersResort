@@ -46,7 +46,7 @@ class Create extends React.Component {
       <div className="Create">
         <h1>Create a Post</h1>
         <h4>What would you like feedback on?</h4>
-        <form className="Create col-6 m-auto">
+        <form onSubmit={this.savePostingEvent} className="Create col-6 m-auto">
         <div className="form-group">
           <h3><label htmlFor="feedbackType"></label></h3>
           <input
@@ -56,6 +56,7 @@ class Create extends React.Component {
           placeholder="What sort of feedback are you looking for?"
           value={newFeedbackType}
           onChange={this.newFeedback}
+          required
           />
         </div>
         <div className="form-group">
@@ -67,6 +68,7 @@ class Create extends React.Component {
           placeholder="What journal or journals are you considering?"
           value={newGoal}
           onChange={this.newGoal}
+          required
           />
         </div>
         <div className="form-group">
@@ -78,9 +80,10 @@ class Create extends React.Component {
           placeholder="Paste your work here"
           value={newBodyText}
           onChange={this.newBodyText}
+          required
           />
         </div>
-    <button className="btn btn-success" onClick={this.savePostingEvent}>Post</button>
+    <button type="submit" className="btn btn-success" onSubmit={this.savePostingEvent}>Post</button>
       </form>
       </div>
       );
