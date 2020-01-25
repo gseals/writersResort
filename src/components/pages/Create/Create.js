@@ -44,8 +44,8 @@ class Create extends React.Component {
       const { newFeedbackType, newGoal, newBodyText } = this.state;
       return (
       <div className="Create">
-        <h1>Create a Post</h1>
-        <h4>What would you like feedback on?</h4>
+        <h1 className="textColor">Create a Post</h1>
+        <h4 className="textColor">What would you like feedback on?</h4>
         <form onSubmit={this.savePostingEvent} className="Create col-6 m-auto">
         <div className="form-group">
           <h3><label htmlFor="feedbackType"></label></h3>

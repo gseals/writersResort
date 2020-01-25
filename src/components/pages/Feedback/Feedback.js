@@ -68,7 +68,6 @@ class Feedback extends React.Component {
     e.preventDefault();
     const { postPathId } = this.props.match.params;
     const { commentId } = this.state;
-    console.log('commentId test', commentId);
     const updateComment = {
       postId: postPathId,
       content: this.state.newContent,
@@ -102,18 +101,18 @@ class Feedback extends React.Component {
 
     return (
       <div className="Feedback">
-        <h1>Feedback</h1>
+        <h1 className="textColor">Feedback</h1>
         <div className="row">
-        <div className="col">
+        <div className="col card">
         <h2>{post.feedbackType}</h2>
         <h2>{post.goal}</h2>
         <h2>{post.bodyText}</h2>
         </div>
         <div className="comments col">
-          <h2>Comments</h2>
+          <h2 className="textColor">Comments</h2>
           { this.state.comments.map((comment) => <Comments key={comment.id} comment={comment} deleteCommentComponent={this.deleteCommentComponent} editCommentFunctionInShared={this.editCommentFunctionInShared}/>)}
         </div>
-        <div className="col">
+        <div className="col card">
           <h2>What do you think?</h2>
           <h2>Any Advice?</h2>
         <form onSubmit={editMode ? this.editCommentEvent : this.saveCommentEvent} className="CommentForm">

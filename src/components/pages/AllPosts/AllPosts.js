@@ -34,8 +34,8 @@ class AllPosts extends React.Component {
   render() {
     return (
       <div className="AllPosts">
-        <h1>All Posts</h1>
-        <h4>These could use your feedback. Press See Full Post to leave a Comment</h4>
+        <h1 className="textColor">All Posts</h1>
+        <h4 className="textColor">These could use your feedback. Press See Full Post to leave a Comment</h4>
         <div className="post d-flex flex-wrap">
           { this.state.posts.map((post) => <SinglePost key={post.id} post={post} deletePostComponent={this.deletePostComponent}/>)}
         </div>

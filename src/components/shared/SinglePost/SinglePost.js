@@ -26,6 +26,8 @@ class SinglePost extends React.Component {
         <div className="card">
           <div className="card-body">
           <h3 className="card-title">{post.feedbackType}</h3>
+          <h3 className="card-title">{post.goal}</h3>
+          <h3 className="card-title">{post.bodyText}</h3>
           <Link className="btn btn-primary" to={`/posts/${postPathId}/feedback`}>See Full Post</Link>
           {
             (post.uid === authData.getUid()) && <div>
