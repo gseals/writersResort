@@ -1,3 +1,200 @@
 .SinglePost {
   display: block;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+body {
+  background-color: rgba(0,0,0,0.1);
+}
+
+/* styling paper */
+// #paper {
+//   width: 600px;
+//   height: 700px;
+//   position: relative;
+//   margin: 20px auto;
+//   padding-top: 40px;
+//   padding-bottom: 40px;
+//   background-color: white;
+//   box-shadow: 0px 0px 5px 0px #888;
+// }
+
+/* styling red vertical line */
+#paper::before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  background-color: rgba(255,0,0,0.6);
+}
+
+/* styling blue horizontal lines */
+#pattern {
+  height: 100%;
+  background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+}
+
+/* styling text content */
+#content {
+  padding-top: 6px;
+  padding-left: 56px;
+  padding-right: 16px;
+  line-height: 25px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 19px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+
+/* push pin code */
+// html {
+//   width: 1000px; 
+// }
+
+// body {
+//  width: 700px;
+//   margin: 0px auto;
+// }
+
+.pushpin, .pushpin2 {
+  margin: 20px auto;
+  position: relative;
+}
+
+.oval {
+  width: 50px;
+  height: 40px;
+  position: relative;
+  display: block;
+  top: 2px;
+  left: 50px;
+  z-index: -10;
+  background: red;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+transform:skew(7deg,10deg);
+-ms-transform:skew(7deg,10deg);
+-moz-transform:skew(7deg,10deg);
+-webkit-transform:skew(7deg,10deg);
+-o-transform:skew(7deg,10deg);
+}
+
+.oval2 {
+  background: #B52310;
+  position: absolute;
+  display: block;
+  top: 2px;
+  left: 50px;
+  z-index: -10;
+  height: 42px;
+ transform:skewX(15deg);
+-ms-transform:skewX(15deg);
+-moz-transform:skewxX(15deg);
+-webkit-transform:skewX(15deg);
+-o-transform:skewX(15deg);
+  width: 50px;
+  height: 40px;
+  background: red;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  transform:skew(7deg,10deg);
+  -ms-transform:skew(7deg,10deg);
+  -moz-transform:skew(7deg,10deg);
+  -webkit-transform:skew(7deg,10deg);
+  -o-transform:skew(7deg,10deg);
+}
+
+.cylinder {
+  display: block;
+  background: #9A210C;
+  height: 30px;
+  width: 35px;
+  position: absolute;
+  border-radius: 0 0 35px 35px;
+  z-index: -20;
+  top: 30px;
+  left: 46px;
+  transform:rotate(10deg);
+  -ms-transform:rotate(10deg);
+  -moz-transform:rotate(10deg);
+  -webkit-transform:rotate(30deg);
+  -o-transform:rotate(10deg);
+}
+
+.oval3, .oval4 {
+  display: block;
+  position: absolute;
+	width: 55px;
+	height: 44px;
+	background: red;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+transform:skew(7deg,10deg);
+-ms-transform:skew(7deg,10deg);
+-moz-transform:skew(7deg,10deg);
+-webkit-transform:skew(7deg,10deg);
+-o-transform:skew(7deg,10deg);
+  z-index: -30;
+  left: 33px;
+  top: 30px;
+}
+
+.oval4 {
+  background: #B52310;
+  position: absolute;
+  display: block;
+  top: 35px;
+  left: 31px;
+  z-index: -40;
+  height: 43px;
+ transform:skewX(15deg);
+-ms-transform:skewX(15deg);
+-moz-transform:skewxX(15deg);
+-webkit-transform:skewX(15deg);
+-o-transform:skewX(15deg);
+    transform:rotate(10deg);
+  -ms-transform:rotate(10deg);
+  -moz-transform:rotate(10deg);
+  -webkit-transform:rotate(20deg);
+  -o-transform:rotate(10deg);
+}
+
+.pin {
+  display: block;
+  background: #999;
+  height: 70px;
+  width: 8px;
+  position: absolute;
+  border-radius: 0 0 20px 20px;
+  z-index: -50;
+  top: 40px;
+  left: 45px;
+  transform:rotate(10deg);
+  -ms-transform:rotate(10deg);
+  -moz-transform:rotate(10deg);
+  -webkit-transform:rotate(30deg);
+  -o-transform:rotate(10deg);
+}
+
+.shadow {
+   background: #aaa; 
+}
+
+.pushpin2 {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  transform: skewX(-30deg);
+  -webkit-transform: skewX(-25deg);
+  left:43px;
+  top: -80px;
+  z-index: -60;
+}
+
+#paper {
+  z-index: 0;
+}

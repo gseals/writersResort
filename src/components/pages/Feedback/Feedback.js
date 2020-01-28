@@ -98,7 +98,6 @@ class Feedback extends React.Component {
 
   splitFunction = () => {
     const formattedText = this.state.post.bodyText.split('\n');
-    console.log(formattedText);
     return formattedText;
   }
 
@@ -116,6 +115,7 @@ class Feedback extends React.Component {
         <div className="col card scrollInDiv">
         <h2>{post.feedbackType}</h2>
         <h2>{post.goal}</h2>
+        <h2>{post.title}</h2>
         <ol>{post.bodyText && this.splitFunction().map((text) => <li>{text}</li>)}</ol>
         </div>
         <div className="comments col scrollInDiv">

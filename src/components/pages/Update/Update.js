@@ -9,6 +9,7 @@ class Update extends React.Component {
   state = {
     updateFeedbackType: ' ',
     updateGoal: ' ',
+    updateTitle: ' ',
     updateBodyText: ' ',
   }
 
@@ -18,7 +19,12 @@ class Update extends React.Component {
       postingData.getSinglePostData(postPathId)
         .then((request) => {
           const post = request.data;
-          this.setState({ updateFeedbackType: post.feedbackType, updateGoal: post.goal, updateBodyText: post.bodyText });
+          this.setState({
+            updateFeedbackType: post.feedbackType,
+            updateGoal: post.goal,
+            updateTitle: post.title,
+            updateBodyText: post.bodyText,
+          });
         })
         .catch((err) => console.error('error with get single post', err));
     }
@@ -34,6 +40,11 @@ class Update extends React.Component {
       this.setState({ updateGoal: e.target.value });
     }
 
+    editTitle = (e) => {
+      e.preventDefault();
+      this.setState({ updateTitle: e.target.value });
+    }
+
     editBodyText = (e) => {
       e.preventDefault();
       this.setState({ updateBodyText: e.target.value });
@@ -45,6 +56,7 @@ class Update extends React.Component {
       const editPost = {
         feedbackType: this.state.updateFeedbackType,
         goal: this.state.updateGoal,
+        title: this.state.updateTitle,
         bodyText: this.state.updateBodyText,
         uid: authData.getUid(),
       };
@@ -54,7 +66,12 @@ class Update extends React.Component {
     };
 
     render() {
-      const { updateFeedbackType, updateGoal, updateBodyText } = this.state;
+      const {
+        updateFeedbackType,
+        updateGoal,
+        updateTitle,
+        updateBodyText,
+      } = this.state;
       return (
       <div className="Update">
         <h1>Update Your Post</h1>
@@ -82,6 +99,17 @@ class Update extends React.Component {
           required
           />
           <div className="form-group">
+          <h3><label htmlFor="update-title"></label></h3>
+          <input
+          type="text"
+          className="form-control"
+          id="update-title"
+          placeholder="Update Title"
+          value={updateTitle}
+          onChange={this.editTitle}
+          required
+          />
+          <div className="form-group">
             <h3><label htmlFor="update-body"></label></h3>
             <textarea
             type="text"
@@ -94,6 +122,7 @@ class Update extends React.Component {
             />
           </div>
           <button type="submit" className="btn btn-success">Update</button>
+        </div>
         </div>
        </div>
       </form>

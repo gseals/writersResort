@@ -1,31 +1,36 @@
 {
   "post1": {
-  "feedbackType": "New",
-  "goal": "Journal1",
-  "bodyText": "These hearts",
+  "feedbackType": "Apple split test",
+  "goal": "Apple split test",
+  "title": "Title1",
+  "bodyText": "Visible, invisible,\nA fluctuating charm,\nAn amber-colored amethyst\nInhabits it; your arm\nApproaches, and\nIt opens and\nIt closes;\nYou have meant\nTo catch it,\nAnd it shrivels;\nYou abandon\nYour intent—\nIt opens, and it\nCloses and you\nReach for it—\nThe blue\nSurrounding it\nGrows cloudy, and\nIt floats away\nFrom you.",
   "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
   },
   "post2": {
-    "feedbackType": "New2",
-    "goal": "Journal2",
-    "bodyText": "These eyes",
+    "feedbackType": "Windows split test",
+    "goal": "Windows split test",
+    "title": "Title2",
+    "bodyText": "Visible, invisible,\r\nA fluctuating charm,\r\nAn amber-colored amethyst\r\nInhabits it; your arm\r\nApproaches, and\r\nIt opens and\nIt closes;\nYou have meant\nTo catch it,\nAnd it shrivels;\nYou abandon\nYour intent—\nIt opens, and it\nCloses and you\nReach for it—\nThe blue\nSurrounding it\nGrows cloudy, and\nIt floats away\nFrom you.",
     "uid": "12345"
   },
   "post3": {
     "feedbackType": "New3",
     "goal": "Journal3",
+    "title": "Title3",
     "bodyText": "These lungs",
     "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
   },
   "post4": {
     "feedbackType": "New4",
     "goal": "Journal4",
+    "title": "Title4",
     "bodyText": "these times",
     "uid": "12345"
   },
   "post5": {
     "feedbackType": "New5",
     "goal": "Journal5",
+    "title": "Title5",
     "bodyText": "these letters",
     "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
   }
