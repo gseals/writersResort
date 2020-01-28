@@ -43,17 +43,17 @@ class Create extends React.Component {
     render() {
       const { newFeedbackType, newGoal, newBodyText } = this.state;
       return (
-      <div className="Create">
+      <div className="Create col-10 m-auto">
         <h1 className="textColor">Create a Post</h1>
         <h4 className="textColor">What would you like feedback on?</h4>
         <form onSubmit={this.savePostingEvent} className="Create col-6 m-auto">
         <div className="form-group">
           <h3><label htmlFor="feedbackType"></label></h3>
-          <input
-          type="textarea"
+          <textarea
+          type="text"
           className="form-control"
           id="feedbackType"
-          placeholder="What sort of feedback are you looking for?"
+          placeholder="What sort of feedback are you looking for? What needs work?"
           value={newFeedbackType}
           onChange={this.newFeedback}
           required
@@ -61,7 +61,7 @@ class Create extends React.Component {
         </div>
         <div className="form-group">
           <h3><label htmlFor="goal"></label></h3>
-          <input
+          <textarea
           type="text"
           className="form-control"
           id="goal"
@@ -73,7 +73,7 @@ class Create extends React.Component {
         </div>
         <div className="form-group">
           <h3><label htmlFor="bodyText"></label></h3>
-          <input
+          <textarea
           type="text"
           className="form-control"
           id="bodyText"

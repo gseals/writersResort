@@ -96,19 +96,29 @@ class Feedback extends React.Component {
       .catch((err) => console.error('error with get single comment', err));
   }
 
+  splitFunction = () => {
+    const formattedText = this.state.post.bodyText.split('\n');
+    console.log(formattedText);
+    return formattedText;
+  }
+
   render() {
-    const { post, newContent, editMode } = this.state;
+    const {
+      post,
+      newContent,
+      editMode,
+    } = this.state;
 
     return (
       <div className="Feedback">
         <h1 className="textColor">Feedback</h1>
         <div className="row">
-        <div className="col card">
+        <div className="col card scrollInDiv">
         <h2>{post.feedbackType}</h2>
         <h2>{post.goal}</h2>
-        <h2>{post.bodyText}</h2>
+        <ol>{post.bodyText && this.splitFunction().map((text) => <li>{text}</li>)}</ol>
         </div>
-        <div className="comments col">
+        <div className="comments col scrollInDiv">
           <h2 className="textColor">Comments</h2>
           { this.state.comments.map((comment) => <Comments key={comment.id} comment={comment} deleteCommentComponent={this.deleteCommentComponent} editCommentFunctionInShared={this.editCommentFunctionInShared}/>)}
         </div>

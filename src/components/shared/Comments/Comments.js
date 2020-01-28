@@ -27,7 +27,7 @@ class Comments extends React.Component {
   render() {
     const { comment } = this.props;
     return (
-      <div className="Comments col-4 mb-3">
+      <div className="Comments mb-3">
         <div className="card">
           <div className="card-body">
             <h3 className="card-title">{comment.content}</h3>

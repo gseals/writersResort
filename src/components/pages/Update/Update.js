@@ -61,8 +61,8 @@ class Update extends React.Component {
         <form onSubmit={this.editPostEvent}className="Update col-6 m-auto">
        <div className="form-group">
          <h3><label htmlFor="updateFeedback"></label></h3>
-         <input
-         type="textarea"
+         <textarea
+         type="text"
          className="form-control"
          id="updateFeedback"
          placeholder="Update Feedback"
@@ -72,8 +72,8 @@ class Update extends React.Component {
         />
         <div className="form-group">
           <h3><label htmlFor="update-goal"></label></h3>
-          <input
-          type="textarea"
+          <textarea
+          type="text"
           className="form-control"
           id="update-goal"
           placeholder="Update Goal"
@@ -83,8 +83,8 @@ class Update extends React.Component {
           />
           <div className="form-group">
             <h3><label htmlFor="update-body"></label></h3>
-            <input
-            type="textarea"
+            <textarea
+            type="text"
             className="form-control"
             id="update-body"
             placeholder="Update Text"
