@@ -55,6 +55,25 @@ class Create extends React.Component {
         newBodyText,
       } = this.state;
       return (
+        <div>
+        <div className="quote-container note1">
+        <i className="pin1"></i>
+        <blockquote>
+        Remember, the clearer you are with the kind of feedback you're looking for, the better the advice you receive can be.
+        </blockquote>
+      </div>
+      <div className="quote-container note2">
+        <i className="pin1"></i>
+        <blockquote>
+        There are lots of journals looking for work like yours. Consider looking at Submittable for open opportunities.
+        </blockquote>
+      </div>
+      <div className="quote-container note3">
+        <i className="pin1"></i>
+        <blockquote>
+        Before you post, reread your work. Any typos? Are the lines broken as you like them? A proofread piece is easier to review.
+        </blockquote>
+      </div>
       <div className="Create col-10 m-auto">
         <h1 className="textColor">Create a Post</h1>
         <h4 className="textColor">What would you like feedback on?</h4>
@@ -89,7 +108,7 @@ class Create extends React.Component {
           type="text"
           className="form-control"
           id="title"
-          placeholder="What is the titl of your work?"
+          placeholder="What is the title of your work?"
           value={newTitle}
           onChange={this.newTitleAction}
           required
@@ -101,7 +120,7 @@ class Create extends React.Component {
           type="text"
           className="form-control"
           id="bodyText"
-          placeholder="Paste your work here"
+          placeholder="Paste or write your work here"
           value={newBodyText}
           onChange={this.newBodyTextAction}
           required
@@ -109,6 +128,7 @@ class Create extends React.Component {
         </div>
     <button type="submit" className="btn btn-success">Post</button>
       </form>
+      </div>
       </div>
       );
     }
