@@ -65,7 +65,7 @@ class Create extends React.Component {
       <div className="quote-container note2">
         <i className="pin1"></i>
         <blockquote>
-        There are lots of journals looking for work like yours. Consider looking at Submittable for open opportunities.
+        There are lots of journals looking for work like yours. Consider looking at <a href="https://www.submittable.com/" target="_blank" rel="noopener noreferrer">Submittable</a> for open opportunities.
         </blockquote>
       </div>
       <div className="quote-container note3">

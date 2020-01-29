@@ -27,8 +27,8 @@ class Comments extends React.Component {
   render() {
     const { comment } = this.props;
     return (
-      <div className="Comments mb-3">
-        <div className="card">
+      <div className="Comments mb-3 d-flex justify-content-center">
+        <div className="commentBackground">
           <div className="card-body">
             <h3 className="card-title">{comment.content}</h3>
             {

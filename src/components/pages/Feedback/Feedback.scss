@@ -6,3 +6,17 @@
   height: 100vh;
   overflow: auto;
 }
+
+#feedbackPattern {
+  height: 100%;
+  background-image: repeating-linear-gradient(#FFFFE0 0px, #FFFFE0 24px, teal 25px);
+}
+
+.col {
+  padding-right: 0!important;
+  padding-left: 0!important;
+}
+
+.commentMakerBackground {
+  background-color: white;
+}
