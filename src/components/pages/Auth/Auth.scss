@@ -1,3 +1,28 @@
 .Auth {
   display: block;
 }
+
+.pushRight {
+  position: absolute;
+  right: 0;
+}
+
+#openBook {
+  border-radius: 8px;
+  margin-top: 7vh;
+  width: 50vh;
+  height: 25%;
+}
+
+.welcomeBox {
+  border: 3px solid black;
+  border-radius: 4px;
+  // padding: 5px;
+  // width: 150px;
+}
+
+.textBackground {
+  background-color: white;
+  width: 50vh;
+}
+

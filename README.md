@@ -77,3 +77,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 * original pushpin code: https://codepen.io/selfpressed/pen/Aiqoy
 
 * comment post it notes: [original](http://creative-punch.net/2014/02/create-css3-post-it-note/) [jsfiddle](https://jsfiddle.net/doug99collins/8v02zj5k/)
+
+* cover image: [unsplash](https://unsplash.com/photos/HzTJMkjctKE)
