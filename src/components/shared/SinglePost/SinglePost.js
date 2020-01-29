@@ -45,7 +45,7 @@ class SinglePost extends React.Component {
           <div className="oval4 shadow"></div>
           <div className="pin shadow"></div>
         </div>
-          <div id="pattern" className="card-body">
+          <div id="singlePattern" className="card-body">
           <h3 id="content" className="card-title">Feedback Type: {post.feedbackType}</h3>
           <h3 id="content" className="card-title">Goals: {post.goal}</h3>
           <h3 id="content" className="card-title">Title: {post.title}</h3>

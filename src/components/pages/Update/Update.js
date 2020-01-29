@@ -73,8 +73,27 @@ class Update extends React.Component {
         updateBodyText,
       } = this.state;
       return (
-      <div className="Update">
-        <h1>Update Your Post</h1>
+        <div>
+        <div className="quote-container note1">
+        <i className="pin1"></i>
+        <blockquote>
+        The clear you are with what you believe needs work, the better your reviewers can tailor their feedback.
+        </blockquote>
+      </div>
+      <div className="quote-container note2">
+        <i className="pin1"></i>
+        <blockquote>
+        Did you check <a href="https://www.submittable.com/" target="_blank" rel="noopener noreferrer">Submittable</a> for opportunities?
+        </blockquote>
+      </div>
+      <div className="quote-container note3">
+        <i className="pin1"></i>
+        <blockquote>
+        Before you re-post, re-read your work. Did you make all of the changes you wanted?
+        </blockquote>
+      </div>
+      <div className="Update col-10 m-auto">
+        <h1 className="textColor">Update Your Post</h1>
         <form onSubmit={this.editPostEvent}className="Update col-6 m-auto">
        <div className="form-group">
          <h3><label htmlFor="updateFeedback"></label></h3>
@@ -126,6 +145,7 @@ class Update extends React.Component {
         </div>
        </div>
       </form>
+      </div>
       </div>
       );
     }

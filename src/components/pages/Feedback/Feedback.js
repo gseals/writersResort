@@ -112,17 +112,20 @@ class Feedback extends React.Component {
       <div className="Feedback">
         <h1 className="textColor">Feedback</h1>
         <div className="row">
-        <div className="col card scrollInDiv">
-        <h2>{post.feedbackType}</h2>
-        <h2>{post.goal}</h2>
-        <h2>{post.title}</h2>
-        <ol>{post.bodyText && this.splitFunction().map((text) => <li>{text}</li>)}</ol>
+        <div id="paper" className="col card scrollInDiv">
+        <div id="feedbackPattern">
+        <h2 id="content">Feedback: {post.feedbackType}</h2>
+        <h2 id="content">Goal: {post.goal}</h2>
+        <h2 id="content">Title: {post.title}</h2>
+        <ol id="content">{post.bodyText && this.splitFunction().map((text) => <li>{text}</li>)}</ol>
+        </div>
         </div>
         <div className="comments col scrollInDiv">
           <h2 className="textColor">Comments</h2>
           { this.state.comments.map((comment) => <Comments key={comment.id} comment={comment} deleteCommentComponent={this.deleteCommentComponent} editCommentFunctionInShared={this.editCommentFunctionInShared}/>)}
         </div>
-        <div className="col card">
+        <div className="col">
+          <div class="commentMakerBackground">
           <h2>What do you think?</h2>
           <h2>Any Advice?</h2>
         <form onSubmit={editMode ? this.editCommentEvent : this.saveCommentEvent} className="CommentForm">
@@ -140,6 +143,7 @@ class Feedback extends React.Component {
             </div>
               <button type="submit" className="btn btn-success">{editMode ? 'Update' : 'Comment'}</button>
           </form>
+          </div>
         </div>
       </div>
       </div>
