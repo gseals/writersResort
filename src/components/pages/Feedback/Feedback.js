@@ -48,6 +48,15 @@ class Feedback extends React.Component {
     this.setState({ newContent: e.target.value });
   }
 
+  makeDate = () => {
+    const d = new Date();
+    const date = d.getDate();
+    const month = d.getMonth() + 1;
+    const year = d.getFullYear();
+    const dateString = `${year}-${month}-${date}`;
+    return dateString;
+  }
+
   // saves a new comment
   saveCommentEvent = (e) => {
     e.preventDefault();
@@ -55,6 +64,7 @@ class Feedback extends React.Component {
     const newComment = {
       postId: postPathId,
       content: this.state.newContent,
+      date: this.makeDate(),
       uid: authData.getUid(),
     };
     commentData.saveComment(newComment)
