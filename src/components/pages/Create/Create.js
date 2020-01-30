@@ -33,12 +33,22 @@ class Create extends React.Component {
     this.setState({ newBodyText: e.target.value });
   }
 
+  makePostingDate = () => {
+    const feed = new Date();
+    const date = feed.getDate();
+    const month = feed.getMonth() + 1;
+    const year = feed.getFullYear();
+    const feedbackDateString = `${year}-${month}-${date}`;
+    return feedbackDateString;
+  }
+
     savePostingEvent = (e) => {
       e.preventDefault();
       const newPosting = {
         feedbackType: this.state.newFeedbackType,
         goal: this.state.newGoal,
         title: this.state.newTitle,
+        date: this.makePostingDate(),
         bodyText: this.state.newBodyText,
         uid: authData.getUid(),
       };

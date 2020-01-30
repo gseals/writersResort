@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 import postingShape from '../../../helpers/propz/postingShape';
 import authData from '../../../helpers/data/authData';
 
@@ -58,6 +59,7 @@ class SinglePost extends React.Component {
           <Link className="btn btn-primary" to={`/posts/${postPathId}/update`}>Edit</Link>
           </div>
           }
+          <p>Post created: {moment(post.date).format('l')}</p>
           </div>
           </div>
         </div>

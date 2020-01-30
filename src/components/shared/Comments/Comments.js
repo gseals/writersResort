@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import commentShape from '../../../helpers/propz/commentShape';
 import authData from '../../../helpers/data/authData';
+
 
 import './Comments.scss';
 
@@ -37,6 +39,7 @@ class Comments extends React.Component {
               <button className="btn btn-primary"onClick={this.handleEditFunction}>Edit</button>
             </div>
             }
+            <p>Comment created: {moment(comment.date).format('l')}</p>
           </div>
         </div>
       </div>
