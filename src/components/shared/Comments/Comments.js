@@ -39,7 +39,7 @@ class Comments extends React.Component {
               <button className="btn btn-primary"onClick={this.handleEditFunction}>Edit</button>
             </div>
             }
-            <p>{moment(comment.date).format('l')}</p>
+            <p>Comment created: {moment(comment.date).format('l')}</p>
           </div>
         </div>
       </div>
