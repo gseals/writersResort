@@ -14,14 +14,14 @@ class Auth extends React.Component {
   render() {
     return (
       <div className="Auth">
-        <h1 className="textColor pushRight">writersResort</h1>
+        <h1 className="textColor">writersResort</h1>
         <div className="text-center welcomeBox">
         <img id="openBook" src={bookImg} alt="Open book"/>
-        </div>
         <div className="d-flex justify-content-center">
         <h4 className="textBackground">Welcome to writersResort! Ready to get started?
         Login using Google by clicking the button below. We
         can't wait to read what you're writing!</h4>
+        </div>
         </div>
         <button className="btn btn-danger" onClick={this.loginClickEvent}>Login with Google</button>
       </div>

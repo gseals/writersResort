@@ -70,12 +70,14 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 *** Sources:
 
-* typewriter on All Posts page: [unsplash](https://unsplash.com/photos/0gkw_9fy0eQ)
+* typewriter on all pages: [unsplash](https://unsplash.com/photos/0gkw_9fy0eQ)
 
 * textbook paper background: https://www.codesdope.com/blog/article/getting-notebook-paper-effect-with-css/
 
-* original pushpin code: https://codepen.io/selfpressed/pen/Aiqoy
+* original thumbtack code: https://codepen.io/selfpressed/pen/Aiqoy
 
 * comment post it notes: [original](http://creative-punch.net/2014/02/create-css3-post-it-note/) [jsfiddle](https://jsfiddle.net/doug99collins/8v02zj5k/)
 
-* cover image: [unsplash](https://unsplash.com/photos/HzTJMkjctKE)
+* image on auth page: [unsplash](https://unsplash.com/photos/HzTJMkjctKE)
+
+* notebook and key on Aabout page: [unsplash](https://unsplash.com/photos/o9KNLaITFYw)

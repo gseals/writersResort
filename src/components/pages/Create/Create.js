@@ -71,7 +71,7 @@ class Create extends React.Component {
       <div className="quote-container note3">
         <i className="pin1"></i>
         <blockquote>
-        Before you post, reread your work. Any typos? Are the lines broken as you like them? A proofread piece is easier to review.
+        Before you post, re-read your work. Any typos? Are the lines broken as you like them? A proofread piece is easier to review.
         </blockquote>
       </div>
       <div className="Create col-10 m-auto">

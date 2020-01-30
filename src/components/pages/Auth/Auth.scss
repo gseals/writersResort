@@ -2,27 +2,19 @@
   display: block;
 }
 
-.pushRight {
-  position: absolute;
-  right: 0;
-}
-
 #openBook {
   border-radius: 8px;
-  margin-top: 7vh;
+  margin-top: 0;
   width: 50vh;
   height: 25%;
-}
-
-.welcomeBox {
-  border: 3px solid black;
-  border-radius: 4px;
-  // padding: 5px;
-  // width: 150px;
+  box-shadow: 5px 10px;
+  // border: 5px 5px 5px 0 solid black;
+  // border-radius: 4px;
 }
 
 .textBackground {
   background-color: white;
   width: 50vh;
+  border-radius: 4px;
+  box-shadow: 5px 10px;
 }
-
