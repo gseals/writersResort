@@ -40,6 +40,7 @@ class Comments extends React.Component {
             </div>
             }
             <p>Comment created: {moment(comment.date).format('l')}</p>
+            <p>Comment left by: {comment.displayName}</p>
           </div>
         </div>
       </div>

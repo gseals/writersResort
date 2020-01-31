@@ -3,60 +3,70 @@
   "postId": "post1",
   "content": "Rad!",
   "date": "2020-01-01",
+  "displayName": "Gabe Seals",
   "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
   },
   "comment2": {
   "postId": "post1",
   "content": "Superb!",
   "date": "2020-01-02",
+  "displayName": "Roger",
   "uid": "12345"
   },
   "comment3": {
   "postId": "post2",
   "content": "Bomber!",
   "date": "2020-01-03",
+  "displayName": "Gabe Seals",
   "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
   },
   "comment4": {
   "postId": "post2",
   "content": "Lit!",
   "date": "2020-01-04",
+  "displayName": "Roger",
   "uid": "12345"
   },
   "comment5": {
   "postId": "post3",
   "content": "Roll out, bro!",
   "date": "2020-01-05",
+  "displayName": "Gabe Seals",
   "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
   },
   "comment6": {
   "postId": "post3",
   "content": "Rad!",
   "date": "2020-01-06",
+  "displayName": "Roger",
   "uid": "12345"
   },
   "comment7": {
   "postId": "post4",
   "content": "Superb!",
   "date": "2020-01-07",
+  "displayName": "Gabe Seals",
   "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
   },
   "comment8": {
   "postId": "post4",
   "content": "Bomber!",
   "date": "2020-01-08",
+  "displayName": "Roger",
   "uid": "12345"
   },
   "comment9": {
   "postId": "post5",
   "content": "Lit!",
   "date": "2020-01-09",
+  "displayName": "Gabe Seals",
   "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
   },
   "comment10": {
   "postId": "post5",
   "content": "Roll out, bro!",
   "date": "2020-01-10",
+  "displayName": "Roger",
   "uid": "12345"
   }
 }

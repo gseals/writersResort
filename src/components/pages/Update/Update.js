@@ -58,6 +58,7 @@ class Update extends React.Component {
         goal: this.state.updateGoal,
         title: this.state.updateTitle,
         bodyText: this.state.updateBodyText,
+        displayName: authData.getDisplayName(),
         uid: authData.getUid(),
       };
       postingData.editPostingData(postPathId, editPost)
