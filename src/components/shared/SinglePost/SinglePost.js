@@ -25,7 +25,7 @@ class SinglePost extends React.Component {
   }
 
   render() {
-    const { post } = this.props;
+    const { post, userStuff } = this.props;
     const postPathId = this.props.post.id;
     return (
       <div className="SinglePost col-4 mb-3">
@@ -50,7 +50,7 @@ class SinglePost extends React.Component {
           <h3 id="content" className="card-title">Feedback Type: {post.feedbackType}</h3>
           <h3 id="content" className="card-title">Goals: {post.goal}</h3>
           <h3 id="content" className="card-title">Title: {post.title}</h3>
-          <ol>{post.bodyText && this.splitFunction().slice(0, 3).map((text) => <li id="content"> {text}</li>)}</ol>
+          <ol>{post.bodyText && this.splitFunction().slice(0, 3).map((text) => <li key={text} id="content"> {text}</li>)}</ol>
           <div>
           <Link className="btn btn-primary" to={`/posts/${postPathId}/feedback`}>See Full Post</Link>
           {
@@ -60,6 +60,7 @@ class SinglePost extends React.Component {
           </div>
           }
           <p>Post created: {moment(post.date).format('l')}</p>
+          <p>Post made by: {post.displayName}</p>
           </div>
           </div>
         </div>

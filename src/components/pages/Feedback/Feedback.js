@@ -3,7 +3,6 @@ import commentData from '../../../helpers/data/commentData';
 import postingData from '../../../helpers/data/postingData';
 import Comments from '../../shared/Comments/Comments';
 import authData from '../../../helpers/data/authData';
-// import SinglePost from '../../shared/SinglePost/SinglePost';
 import './Feedback.scss';
 
 class Feedback extends React.Component {
@@ -65,6 +64,7 @@ class Feedback extends React.Component {
       postId: postPathId,
       content: this.state.newContent,
       date: this.makeCommentDate(),
+      displayName: authData.getDisplayName(),
       uid: authData.getUid(),
     };
     commentData.saveComment(newComment)
@@ -82,6 +82,7 @@ class Feedback extends React.Component {
       postId: postPathId,
       content: this.state.newContent,
       date: this.makeCommentDate(),
+      displayName: authData.getDisplayName(),
       uid: authData.getUid(),
     };
     commentData.getSingleCommentData(commentId)
@@ -128,7 +129,7 @@ class Feedback extends React.Component {
         <h2 id="content">Feedback: {post.feedbackType}</h2>
         <h2 id="content">Goal: {post.goal}</h2>
         <h2 id="content">Title: {post.title}</h2>
-        <ol id="content">{post.bodyText && this.splitFunction().map((text) => <li>{text}</li>)}</ol>
+        <ol id="content">{post.bodyText && this.splitFunction().map((text) => <li key={text} >{text}</li>)}</ol>
         </div>
         </div>
         <div className="comments col scrollInDiv">
@@ -136,7 +137,7 @@ class Feedback extends React.Component {
           { this.state.comments.map((comment) => <Comments key={comment.id} comment={comment} deleteCommentComponent={this.deleteCommentComponent} editCommentFunctionInShared={this.editCommentFunctionInShared}/>)}
         </div>
         <div className="col">
-          <div class="commentMakerBackground">
+          <div className="commentMakerBackground">
           <h2>What do you think?</h2>
           <h2>Any Advice?</h2>
         <form onSubmit={editMode ? this.editCommentEvent : this.saveCommentEvent} className="CommentForm">

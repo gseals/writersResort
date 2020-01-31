@@ -33,12 +33,14 @@ firebaseConnection();
 class App extends React.Component {
   state = {
     authed: false,
+    userStuff: '',
   }
 
   componentDidMount() {
-    this.removeListener = firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        this.setState({ authed: true });
+    this.removeListener = firebase.auth().onAuthStateChanged((userStuff) => {
+      if (userStuff) {
+        console.log('user', userStuff);
+        this.setState({ authed: true, userStuff });
       } else {
         this.setState({ authed: false });
       }
@@ -50,17 +52,17 @@ class App extends React.Component {
   }
 
   render() {
-    const { authed } = this.state;
+    const { authed, userStuff } = this.state;
     return (
     <div className="App">
       <Router>
-        <MyNavBar authed={authed} />
+        <MyNavBar authed={authed} userStuff={userStuff}/>
         <Switch>
           <PublicRoute path="/auth" exact component={Auth} authed={authed}/>
           <PublicRoute path="/logout" exact component={Logout} authed={authed}/>
           <Route path="/about" exact component={About} authed={authed}/>
-          <PrivateRoute path="/" exact component={AllPosts} authed={authed}/>
-          <PrivateRoute path="/posts/all" exact component={AllPosts} authed={authed}/>
+          <PrivateRoute path="/" exact component={AllPosts} authed={authed} userStuff={userStuff}/>
+          <PrivateRoute path="/posts/all" exact component={AllPosts} authed={authed} userStuff={userStuff}/>
           <PrivateRoute path="/posts/create" exact component={Create} authed={authed}/>
           <PrivateRoute path="/posts/:postPathId/feedback" exact component={Feedback} authed={authed}/>
           <PrivateRoute path="/posts/:postPathId/update" exact component={Update} authed={authed}/>

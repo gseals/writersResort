@@ -32,12 +32,13 @@ class AllPosts extends React.Component {
   }
 
   render() {
+    const { userStuff } = this.props;
     return (
       <div className="AllPosts">
         <h1 className="textColor">All Posts</h1>
         <h4 className="textColor">These could use your feedback. Press See Full Post to leave a Comment</h4>
         <div className="post d-flex flex-wrap">
-          { this.state.posts.map((post) => <SinglePost key={post.id} post={post} deletePostComponent={this.deletePostComponent}/>)}
+          { this.state.posts.map((post) => <SinglePost key={post.id} post={post} deletePostComponent={this.deletePostComponent} userStuff={userStuff}/>)}
         </div>
       </div>
     );

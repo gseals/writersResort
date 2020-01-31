@@ -5,38 +5,47 @@
   "title": "Title1",
   "date": "2020-01-13",
   "bodyText": "Visible, invisible,\nA fluctuating charm,\nAn amber-colored amethyst\nInhabits it; your arm\nApproaches, and\nIt opens and\nIt closes;\nYou have meant\nTo catch it,\nAnd it shrivels;\nYou abandon\nYour intent—\nIt opens, and it\nCloses and you\nReach for it—\nThe blue\nSurrounding it\nGrows cloudy, and\nIt floats away\nFrom you.",
+  "displayName": "Gabe Seals",
   "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
   },
+
   "post2": {
     "feedbackType": "Windows split test",
     "goal": "Windows split test",
     "title": "Title2",
     "date": "2020-01-14",
     "bodyText": "Visible, invisible,\r\nA fluctuating charm,\r\nAn amber-colored amethyst\r\nInhabits it; your arm\r\nApproaches, and\r\nIt opens and\nIt closes;\nYou have meant\nTo catch it,\nAnd it shrivels;\nYou abandon\nYour intent—\nIt opens, and it\nCloses and you\nReach for it—\nThe blue\nSurrounding it\nGrows cloudy, and\nIt floats away\nFrom you.",
+    "displayName": "Roger",
     "uid": "12345"
   },
+
   "post3": {
     "feedbackType": "New3",
     "goal": "Journal3",
     "title": "Title3",
     "date": "2020-01-15",
     "bodyText": "These lungs",
+    "displayName": "Gabe Seals",
     "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
   },
+
   "post4": {
     "feedbackType": "New4",
     "goal": "Journal4",
     "title": "Title4",
     "date": "2020-01-16",
     "bodyText": "these times",
+    "displayName": "Roger",
     "uid": "12345"
   },
+  
   "post5": {
     "feedbackType": "New5",
     "goal": "Journal5",
     "title": "Title5",
     "date": "2020-01-17",
     "bodyText": "these letters",
+    "displayName": "Gabe Seals",
     "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
   }
 }
