@@ -78,7 +78,7 @@ class Create extends React.Component {
         </blockquote>
       </div>
       <div className="Create col-10 m-auto">
-        <h1 className="textColor">Create a Post</h1>
+        <h1 className="textColor marginTop">Create a Post</h1>
         <h4 className="textColor">What would you like feedback on?</h4>
         <form onSubmit={this.savePostingEvent} className="Create col-6 m-auto">
         <div className="form-group">

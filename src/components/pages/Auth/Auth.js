@@ -14,7 +14,7 @@ class Auth extends React.Component {
   render() {
     return (
       <div className="Auth">
-        <h1 className="textColor">writersResort</h1>
+        <h1 className="textColor marginTop">writersResort</h1>
         <div className="text-center welcomeBox">
         <img id="openBook" src={bookImg} alt="Open book"/>
         <div className="d-flex justify-content-center">

@@ -132,7 +132,7 @@ class Feedback extends React.Component {
 
     return (
       <div className="Feedback">
-        <h1 className="textColor">Feedback</h1>
+        <h1 className="textColor marginTop">Feedback</h1>
         <div className="row">
         <div id="paper1" className="col card scrollInDiv">
         <div id="feedbackPattern">

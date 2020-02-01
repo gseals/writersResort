@@ -8,7 +8,7 @@ class About extends React.Component {
   render() {
     return (
       <div className="About">
-        <h1 className="textColor marginDelete">writersResort</h1>
+        <h1 className="textColor marginDelete marginTop">writersResort</h1>
         <div className="text-center">
         <img id="noteBookKey" src={noteBookKey} alt="Notebook with key"/>
         <div className="d-flex justify-content-center">

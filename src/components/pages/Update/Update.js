@@ -100,7 +100,7 @@ class Update extends React.Component {
         </blockquote>
       </div>
       <div className="Update col-10 m-auto">
-        <h1 className="textColor">Update Your Post</h1>
+        <h1 className="textColor marginTop">Update Your Post</h1>
         <h4 className="textColor">What's the new feedback you're looking for?</h4>
         <form onSubmit={this.editPostEvent}className="Update col-6 m-auto">
        <div className="form-group">
