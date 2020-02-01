@@ -1,6 +1,6 @@
 {
-  "id": "id",
-  "firstName": "firstName",
-  "lastName": "lastName",
-  "uid": "uid"
+"user1": {
+  "experience": "workshops",
+  "uid": "12345"
+  }
 }

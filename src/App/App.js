@@ -17,6 +17,7 @@ import Create from '../components/pages/Create/Create';
 import Feedback from '../components/pages/Feedback/Feedback';
 import Achievements from '../components/pages/Achievements/Achievements';
 import Update from '../components/pages/Update/Update';
+import AchievementForm from '../components/pages/AchievementForm/AchievementForm';
 
 
 const PublicRoute = ({ component: Component, authed, ...rest }) => {
@@ -66,6 +67,7 @@ class App extends React.Component {
           <PrivateRoute path="/posts/:postPathId/feedback" exact component={Feedback} authed={authed}/>
           <PrivateRoute path="/posts/:postPathId/update" exact component={Update} authed={authed}/>
           <PrivateRoute path="/achievements/:userPath" exact component={Achievements} authed={authed}/>
+          <PrivateRoute path="/achievements/:userPath/form" exact component={AchievementForm} authed={authed}/>
         </Switch>
       </Router>
     </div>

@@ -8,7 +8,7 @@ import date from '../../../helpers/data/date';
 import './Feedback.scss';
 
 class Feedback extends React.Component {
-  state= {
+  state = {
     post: {},
     comments: [],
     newContent: '',

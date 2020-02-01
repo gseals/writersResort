@@ -7,11 +7,9 @@ const getDisplayName = () => firebase.auth().currentUser.displayName;
 
 const getUserPhoto = () => firebase.auth().currentUser.photoURL;
 
-const fine = () => firebase.auth().currentUser.photoURL;
 
 export default {
   getUid,
   getDisplayName,
   getUserPhoto,
-  fine,
 };

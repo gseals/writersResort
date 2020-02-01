@@ -4,7 +4,6 @@ import SinglePost from '../../shared/SinglePost/SinglePost';
 import postingData from '../../../helpers/data/postingData';
 import './AllPosts.scss';
 import commentData from '../../../helpers/data/commentData';
-import authData from '../../../helpers/data/authData';
 
 class AllPosts extends React.Component {
   state = {
@@ -19,7 +18,6 @@ class AllPosts extends React.Component {
 
   componentDidMount() {
     this.getPostDataComponent();
-    console.log('auth', authData.fine());
   }
 
   deletePostComponent = (postId) => {
