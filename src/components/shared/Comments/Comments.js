@@ -41,6 +41,7 @@ class Comments extends React.Component {
             }
             <p>Comment created: {moment(comment.date).format('l')}</p>
             <p>Comment left by: {comment.displayName}</p>
+            <img className="userImg" src={comment.photoURL} alt="user"/>
           </div>
         </div>
       </div>

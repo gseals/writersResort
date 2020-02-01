@@ -61,6 +61,7 @@ class Update extends React.Component {
         bodyText: this.state.updateBodyText,
         date: date.createDate(),
         displayName: authData.getDisplayName(),
+        photoURL: authData.getUserPhoto(),
         uid: authData.getUid(),
       };
       postingData.editPostingData(postPathId, editPost)

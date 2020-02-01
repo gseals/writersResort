@@ -57,6 +57,7 @@ class Feedback extends React.Component {
       content: this.state.newContent,
       date: date.createDate(),
       displayName: authData.getDisplayName(),
+      photoURL: authData.getUserPhoto(),
       uid: authData.getUid(),
     };
     commentData.saveComment(newComment)
@@ -75,6 +76,7 @@ class Feedback extends React.Component {
       content: this.state.newContent,
       date: date.createDate(),
       displayName: authData.getDisplayName(),
+      photoURL: authData.getUserPhoto(),
       uid: authData.getUid(),
     };
     commentData.getSingleCommentData(commentId)

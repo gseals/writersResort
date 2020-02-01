@@ -5,6 +5,7 @@ const commentShape = PropTypes.shape({
   content: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   displayName: PropTypes.string,
+  photoURL: PropTypes.string,
   uid: PropTypes.string.isRequired,
 });
 

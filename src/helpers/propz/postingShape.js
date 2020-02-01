@@ -7,6 +7,7 @@ const postingShape = PropTypes.shape({
   date: PropTypes.string,
   bodyText: PropTypes.string.isRequired,
   displayName: PropTypes.string,
+  photoURL: PropTypes.string,
   uid: PropTypes.string.isRequired,
 });
 

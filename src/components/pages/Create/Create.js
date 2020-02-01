@@ -42,6 +42,7 @@ class Create extends React.Component {
         date: date.createDate(),
         bodyText: this.state.newBodyText,
         displayName: authData.getDisplayName(),
+        photoURL: authData.getUserPhoto(),
         uid: authData.getUid(),
       };
       postingData.savePosting(newPosting)
