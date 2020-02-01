@@ -25,7 +25,7 @@ class SinglePost extends React.Component {
   }
 
   render() {
-    const { post, userStuff } = this.props;
+    const { post } = this.props;
     const postPathId = this.props.post.id;
     return (
       <div className="SinglePost col-4 mb-3">

@@ -2,6 +2,7 @@ import React from 'react';
 
 import postingData from '../../../helpers/data/postingData';
 import authData from '../../../helpers/data/authData';
+import date from '../../../helpers/data/date';
 
 import './Update.scss';
 
@@ -58,6 +59,7 @@ class Update extends React.Component {
         goal: this.state.updateGoal,
         title: this.state.updateTitle,
         bodyText: this.state.updateBodyText,
+        date: date.createDate(),
         displayName: authData.getDisplayName(),
         uid: authData.getUid(),
       };
