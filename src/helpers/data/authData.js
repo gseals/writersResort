@@ -5,4 +5,13 @@ const getUid = () => firebase.auth().currentUser.uid;
 
 const getDisplayName = () => firebase.auth().currentUser.displayName;
 
-export default { getUid, getDisplayName };
+const getUserPhoto = () => firebase.auth().currentUser.photoURL;
+
+const fine = () => firebase.auth().currentUser.photoURL;
+
+export default {
+  getUid,
+  getDisplayName,
+  getUserPhoto,
+  fine,
+};
