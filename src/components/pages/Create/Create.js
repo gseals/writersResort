@@ -2,7 +2,7 @@ import React from 'react';
 
 import postingData from '../../../helpers/data/postingData';
 import authData from '../../../helpers/data/authData';
-
+import date from '../../../helpers/data/date';
 import './Create.scss';
 
 class Create extends React.Component {
@@ -33,22 +33,13 @@ class Create extends React.Component {
     this.setState({ newBodyText: e.target.value });
   }
 
-  makePostingDate = () => {
-    const feed = new Date();
-    const date = feed.getDate();
-    const month = feed.getMonth() + 1;
-    const year = feed.getFullYear();
-    const feedbackDateString = `${year}-${month}-${date}`;
-    return feedbackDateString;
-  }
-
     savePostingEvent = (e) => {
       e.preventDefault();
       const newPosting = {
         feedbackType: this.state.newFeedbackType,
         goal: this.state.newGoal,
         title: this.state.newTitle,
-        date: this.makePostingDate(),
+        date: date.createDate(),
         bodyText: this.state.newBodyText,
         displayName: authData.getDisplayName(),
         uid: authData.getUid(),

@@ -3,6 +3,7 @@ import commentData from '../../../helpers/data/commentData';
 import postingData from '../../../helpers/data/postingData';
 import Comments from '../../shared/Comments/Comments';
 import authData from '../../../helpers/data/authData';
+import date from '../../../helpers/data/date';
 import './Feedback.scss';
 
 class Feedback extends React.Component {
@@ -47,15 +48,6 @@ class Feedback extends React.Component {
     this.setState({ newContent: e.target.value });
   }
 
-  makeCommentDate = () => {
-    const com = new Date();
-    const date = com.getDate();
-    const month = com.getMonth() + 1;
-    const year = com.getFullYear();
-    const commentDateString = `${year}-${month}-${date}`;
-    return commentDateString;
-  }
-
   // saves a new comment
   saveCommentEvent = (e) => {
     e.preventDefault();
@@ -63,7 +55,7 @@ class Feedback extends React.Component {
     const newComment = {
       postId: postPathId,
       content: this.state.newContent,
-      date: this.makeCommentDate(),
+      date: date.createDate(),
       displayName: authData.getDisplayName(),
       uid: authData.getUid(),
     };
@@ -81,7 +73,7 @@ class Feedback extends React.Component {
     const updateComment = {
       postId: postPathId,
       content: this.state.newContent,
-      date: this.makeCommentDate(),
+      date: date.createDate(),
       displayName: authData.getDisplayName(),
       uid: authData.getUid(),
     };
