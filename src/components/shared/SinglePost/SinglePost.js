@@ -60,6 +60,8 @@ class SinglePost extends React.Component {
           </div>
           }
           <p>Post created: {moment(post.date).format('l')}</p>
+
+          {post.upDate ? <p>Last updated: {moment(post.upDate).fromNow()}</p> : null}
           <p>Post made by: {post.displayName}</p>
           <img className="userImg" src={post.photoURL} alt="user"/>
           </div>

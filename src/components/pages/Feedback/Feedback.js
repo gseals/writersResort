@@ -15,12 +15,13 @@ class Feedback extends React.Component {
     postPathId: '',
     commentId: '',
     editMode: false,
+    date: ' ',
   }
 
   // this function places comments on the page
   getCommentDataComponent = (postId) => {
     commentData.getCommentsByPostingIdData(postId)
-      .then((comments) => this.setState({ comments }))
+      .then((comments) => this.setState({ comments, date }))
       .catch((err) => console.error('error in get comments', err));
   }
 
@@ -75,7 +76,8 @@ class Feedback extends React.Component {
     const updateComment = {
       postId: postPathId,
       content: this.state.newContent,
-      date: date.createDate(),
+      date: this.state.date,
+      upDate: new Date(),
       displayName: authData.getDisplayName(),
       photoURL: authData.getUserPhoto(),
       uid: authData.getUid(),
