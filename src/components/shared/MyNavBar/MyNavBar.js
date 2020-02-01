@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-
+import { Navbar } from 'reactstrap';
 import PropTypes from 'prop-types';
 
 import firebase from 'firebase/app';
@@ -21,21 +21,23 @@ class MyNavBar extends React.Component {
 
   render() {
     const { authed, userStuff } = this.props;
+    const userPath = this.props.userStuff.uid;
+
     const buildNavBar = () => {
       if (authed) {
         return (
         <ul className="navbar-nav ml-auto">
-          <div>
-            <p><img className="userImg" src={userStuff.photoURL} alt="current user" /> Welcome, {userStuff.displayName}</p>
+          <div className="d-flex flex-row">
+          <img className="userImg" src={userStuff.photoURL} alt="current user" /><Link id={userStuff.uid} className="navFont profileBackground" to={`/achievements/${userPath}`}>Welcome, {userStuff.displayName}</Link>
           </div>
           <li className="nav-item">
-            <Link className="nav-link" to="/posts/all">All Posts</Link>
+            <Link className="nav-link navFont btn btn-info" to="/posts/all">All Posts</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/posts/create">Create Post</Link>
+            <Link className="nav-link navFont btn btn-info" to="/posts/create">Create Post</Link>
           </li>
           <li className="nav-item">
-            <button className="nav-link btn btn-outline-danger" onClick={this.logMeOut}>Logout</button>
+            <button className="nav-link navFont btn btn-danger" onClick={this.logMeOut}>Logout</button>
           </li>
         </ul>
         );
@@ -46,12 +48,12 @@ class MyNavBar extends React.Component {
 
     return (
       <div className="MyNavBar">
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <nav className="navbar navbar-expand-lg">
                   <div>
-              <Link className="navbar-brand" to="/">writersResort</Link>
+              <Link className="navbar-brand btn btn-info removeMarginRight" to="/">writersResort</Link>
               </div>
               <div>
-              <Link className="navbar-brand" to="/about">About</Link>
+              <Link className="navbar-brand btn btn-info removeMarginRight" to="/about">About</Link>
               </div>
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
