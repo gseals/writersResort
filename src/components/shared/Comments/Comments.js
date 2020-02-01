@@ -4,7 +4,6 @@ import moment from 'moment';
 import commentShape from '../../../helpers/propz/commentShape';
 import authData from '../../../helpers/data/authData';
 
-
 import './Comments.scss';
 
 class Comments extends React.Component {

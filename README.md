@@ -80,6 +80,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 * image on auth page: [unsplash](https://unsplash.com/photos/HzTJMkjctKE)
 
-* notebook and key on Aabout page: [unsplash](https://unsplash.com/photos/o9KNLaITFYw)
+* notebook and key on About page: [unsplash](https://unsplash.com/photos/o9KNLaITFYw)
 
 * Roger's profile photo: [unsplash](https://unsplash.com/photos/9R-CH7PR150)
+
+* scattered paper in comments: [unsplash](https://unsplash.com/photos/aJTiW00qqtI)
+
+* brown paper on make comment: [unsplash](https://unsplash.com/photos/Y3vPEuNlf7w)
