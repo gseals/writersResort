@@ -13,7 +13,6 @@ class Achievements extends React.Component {
     return (
       <div className="Achievements">
         <h1 className="textColor marginTop">Logout Transition</h1>
-        <p>This page needs to be accessed as someone is leaving the website</p>
         <Link className="btn btn-primary" to={`/achievements/${userPath}/form`}>Create Experiences</Link>
       </div>
     );
