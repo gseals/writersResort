@@ -4,7 +4,6 @@ import moment from 'moment';
 import commentShape from '../../../helpers/propz/commentShape';
 import authData from '../../../helpers/data/authData';
 
-
 import './Comments.scss';
 
 class Comments extends React.Component {
@@ -40,6 +39,7 @@ class Comments extends React.Component {
             </div>
             }
             <p>Comment created: {moment(comment.date).format('l')}</p>
+            {comment.upDate ? <p>Comment updated: {moment(comment.upDate).fromNow()}</p> : null }
             <p>Comment left by: {comment.displayName}</p>
             <img className="userImg" src={comment.photoURL} alt="user"/>
           </div>

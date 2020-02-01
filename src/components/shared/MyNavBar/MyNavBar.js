@@ -35,7 +35,7 @@ class MyNavBar extends React.Component {
             <Link className="nav-link" to="/posts/create">Create Post</Link>
           </li>
           <li className="nav-item">
-            <button className="nav-link btn btn-danger" onClick={this.logMeOut}>Logout</button>
+            <button className="nav-link btn btn-outline-danger" onClick={this.logMeOut}>Logout</button>
           </li>
         </ul>
         );

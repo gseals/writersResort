@@ -1,5 +1,5 @@
 import React from 'react';
-
+import moment from 'moment';
 import SinglePost from '../../shared/SinglePost/SinglePost';
 import postingData from '../../../helpers/data/postingData';
 import './AllPosts.scss';
@@ -34,7 +34,21 @@ class AllPosts extends React.Component {
   }
 
   render() {
+    const { posts } = this.state;
     const { userStuff } = this.props;
+
+    posts.sort((a, b) => {
+      const aDate = moment(a.date);
+      const bDate = moment(b.date);
+      if (aDate.isBefore(bDate)) {
+        return 11;
+      }
+      if (bDate.isBefore(aDate)) {
+        return -1;
+      }
+      return 0;
+    });
+
     return (
       <div className="AllPosts">
         <h1 className="textColor">All Posts</h1>

@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import commentData from '../../../helpers/data/commentData';
 import postingData from '../../../helpers/data/postingData';
 import Comments from '../../shared/Comments/Comments';
@@ -14,12 +15,13 @@ class Feedback extends React.Component {
     postPathId: '',
     commentId: '',
     editMode: false,
+    date: ' ',
   }
 
   // this function places comments on the page
   getCommentDataComponent = (postId) => {
     commentData.getCommentsByPostingIdData(postId)
-      .then((comments) => this.setState({ comments }))
+      .then((comments) => this.setState({ comments, date }))
       .catch((err) => console.error('error in get comments', err));
   }
 
@@ -74,7 +76,8 @@ class Feedback extends React.Component {
     const updateComment = {
       postId: postPathId,
       content: this.state.newContent,
-      date: date.createDate(),
+      date: this.state.date,
+      upDate: new Date(),
       displayName: authData.getDisplayName(),
       photoURL: authData.getUserPhoto(),
       uid: authData.getUid(),
@@ -112,13 +115,26 @@ class Feedback extends React.Component {
       post,
       newContent,
       editMode,
+      comments,
     } = this.state;
+
+    comments.sort((a, b) => {
+      const aDate = moment(a.date);
+      const bDate = moment(b.date);
+      if (aDate.isBefore(bDate)) {
+        return 1;
+      }
+      if (bDate.isBefore(aDate)) {
+        return -1;
+      }
+      return 0;
+    });
 
     return (
       <div className="Feedback">
         <h1 className="textColor">Feedback</h1>
         <div className="row">
-        <div id="paper" className="col card scrollInDiv">
+        <div id="paper1" className="col card scrollInDiv">
         <div id="feedbackPattern">
         <h2 id="content">Feedback: {post.feedbackType}</h2>
         <h2 id="content">Goal: {post.goal}</h2>

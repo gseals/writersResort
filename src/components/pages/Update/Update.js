@@ -2,7 +2,7 @@ import React from 'react';
 
 import postingData from '../../../helpers/data/postingData';
 import authData from '../../../helpers/data/authData';
-import date from '../../../helpers/data/date';
+// import date from '../../../helpers/data/date';
 
 import './Update.scss';
 
@@ -12,6 +12,7 @@ class Update extends React.Component {
     updateGoal: ' ',
     updateTitle: ' ',
     updateBodyText: ' ',
+    date: ' ',
   }
 
   componentDidMount() {
@@ -25,6 +26,7 @@ class Update extends React.Component {
             updateGoal: post.goal,
             updateTitle: post.title,
             updateBodyText: post.bodyText,
+            date: post.date,
           });
         })
         .catch((err) => console.error('error with get single post', err));
@@ -59,7 +61,8 @@ class Update extends React.Component {
         goal: this.state.updateGoal,
         title: this.state.updateTitle,
         bodyText: this.state.updateBodyText,
-        date: date.createDate(),
+        date: this.state.date,
+        upDate: new Date(),
         displayName: authData.getDisplayName(),
         photoURL: authData.getUserPhoto(),
         uid: authData.getUid(),
@@ -98,6 +101,7 @@ class Update extends React.Component {
       </div>
       <div className="Update col-10 m-auto">
         <h1 className="textColor">Update Your Post</h1>
+        <h4 className="textColor">What's the new feedback you're looking for?</h4>
         <form onSubmit={this.editPostEvent}className="Update col-6 m-auto">
        <div className="form-group">
          <h3><label htmlFor="updateFeedback"></label></h3>
