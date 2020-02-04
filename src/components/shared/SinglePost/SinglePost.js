@@ -56,7 +56,7 @@ class SinglePost extends React.Component {
           {
             (post.uid === authData.getUid()) && <div>
           <button className="btn btn-danger" onClick={this.handleDeletePostEvent}>X</button>
-          <Link className="btn btn-primary" to={`/posts/${postPathId}/update`}>Edit</Link>
+          <Link className="btn btn-success" to={`/posts/${postPathId}/update`}>Edit</Link>
           </div>
           }
           <p>Post created: {moment(post.date).format('l')}</p>

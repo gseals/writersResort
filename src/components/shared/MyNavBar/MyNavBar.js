@@ -27,7 +27,7 @@ class MyNavBar extends React.Component {
         return (
         <ul className="navbar-nav ml-auto">
           <div className="d-flex flex-row">
-          <img className="userImg" src={userStuff.photoURL} alt="current user" /><Link id={userStuff.uid} className="navFont profileBackground" to={`/achievements/${userPath}`}>Welcome, {userStuff.displayName}</Link>
+          <img className="userImg" src={userStuff.photoURL} alt="current user"/><p id={userStuff.uid} className="navFont profileBackground" to={`/achievements/${userPath}`}>Welcome, {userStuff.displayName}</p>
           </div>
           <li className="nav-item">
             <Link className="nav-link navFont btn btn-info" to="/posts/all">All Posts</Link>

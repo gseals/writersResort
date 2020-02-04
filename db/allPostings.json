@@ -22,33 +22,33 @@
   },
 
   "post3": {
-    "feedbackType": "New3",
-    "goal": "Journal3",
-    "title": "Title3",
+    "feedbackType": "Poem3",
+    "goal": "Carl Sandburg Quarterly",
+    "title": "Theme in Yellow",
     "date": "2020-01-15",
-    "bodyText": "These lungs",
+    "bodyText": "I spot the hills\nWith yellow balls in autumn.\nI light the prairie cornfields\nOrange and tawny gold clusters\nAnd I am called pumpkins.\nOn the last of October\nWhen dusk is fallen\nChildren join hands\nAnd circle round me\nSinging ghost songs\nAnd love to the harvest moon;\nI am a jack-o'-lantern\nWith terrible teeth\nAnd the children know\nI am fooling.",
     "displayName": "Gabe Seals",
     "photoURL": "https://lh3.googleusercontent.com/a-/AAuE7mCCUoHhMQuBIeKVpgPK88uFPtza6_jb1CBqFBE3",
     "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
   },
 
   "post4": {
-    "feedbackType": "New4",
-    "goal": "Journal4",
-    "title": "Title4",
+    "feedbackType": "Poem4",
+    "goal": "Anonymous News",
+    "title": "Clouds",
     "date": "2020-01-16",
-    "bodyText": "these times",
+    "bodyText": "White sheep, white sheep,\nOn a blue hill,\nWhen the wind stops,\nYou all stand still.\nWhen the wind blows,\nYou walk away slow.\nWhite sheep, white sheep,\nWhere do you go?",
     "displayName": "Roger",
     "photoURL": "https://images.unsplash.com/photo-1505503693641-1926193e8d57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
     "uid": "12345"
   },
   
   "post5": {
-    "feedbackType": "New5",
-    "goal": "Journal5",
-    "title": "Title5",
+    "feedbackType": "Poem5",
+    "goal": "Rossetti International",
+    "title": "Who Has Seen the Wind?",
     "date": "2020-01-17",
-    "bodyText": "these letters",
+    "bodyText": "Who has seen the wind?\nNeither I nor you.\nBut when the leaves hang trembling,\nThe wind is passing through.\nWho has seen the wind?\nNeither you nor I.\nBut when the trees bow down their heads,\nThe wind is passing by.",
     "displayName": "Gabe Seals",
     "photoURL": "https://lh3.googleusercontent.com/a-/AAuE7mCCUoHhMQuBIeKVpgPK88uFPtza6_jb1CBqFBE3",
     "uid": "ptnONS8SU7f5rhsyyfRmuJPcfX22"
