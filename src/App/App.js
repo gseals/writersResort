@@ -66,8 +66,8 @@ class App extends React.Component {
           <PrivateRoute path="/posts/create" exact component={Create} authed={authed}/>
           <PrivateRoute path="/posts/:postPathId/feedback" exact component={Feedback} authed={authed}/>
           <PrivateRoute path="/posts/:postPathId/update" exact component={Update} authed={authed}/>
-          <PrivateRoute path="/achievements/:userPath" exact component={Achievements} authed={authed}/>
-          <PrivateRoute path="/achievements/:userPath/form" exact component={AchievementForm} authed={authed}/>
+          {/* <PrivateRoute path="/achievements/:userPath" exact component={Achievements} authed={authed}/>
+          <PrivateRoute path="/achievements/:userPath/form" exact component={AchievementForm} authed={authed}/> */}
         </Switch>
       </Router>
     </div>

@@ -153,7 +153,7 @@ class Feedback extends React.Component {
         <form onSubmit={editMode ? this.editCommentEvent : this.saveCommentEvent} className="CommentForm">
         <div className="form-group">
           <label htmlFor="new-content"></label>
-          <input
+          <textarea
           type="textarea"
           className="form-control"
           id="new-content"
