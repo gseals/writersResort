@@ -16,6 +16,7 @@ class Feedback extends React.Component {
     commentId: '',
     editMode: false,
     date: ' ',
+    editCommentDate: '',
   }
 
   // this function places comments on the page
@@ -30,7 +31,7 @@ class Feedback extends React.Component {
     const { postPathId } = this.props.match.params;
     postingData.getSinglePostData(postPathId)
       .then((response) => {
-        this.setState({ post: response.data });
+        this.setState({ post: response.data, date });
         this.getCommentDataComponent(postPathId);
       })
       .catch((err) => console.error('error in get single board', err));
@@ -68,7 +69,6 @@ class Feedback extends React.Component {
       .catch((err) => console.error('error from save comment', err));
   }
 
-  // WIP
   editCommentEvent = (e) => {
     e.preventDefault();
     const { postPathId } = this.props.match.params;
@@ -76,7 +76,7 @@ class Feedback extends React.Component {
     const updateComment = {
       postId: postPathId,
       content: this.state.newContent,
-      date: this.state.date,
+      date: this.state.editCommentDate,
       upDate: new Date(),
       displayName: authData.getDisplayName(),
       photoURL: authData.getUserPhoto(),
@@ -100,7 +100,12 @@ class Feedback extends React.Component {
     commentData.getSingleCommentData(commentId)
       .then((request) => {
         const comment = request.data;
-        this.setState({ newContent: comment.content, editMode: true, commentId: e });
+        this.setState({
+          newContent: comment.content,
+          editMode: true,
+          commentId: e,
+          editCommentDate: comment.date,
+        });
       })
       .catch((err) => console.error('error with get single comment', err));
   }
