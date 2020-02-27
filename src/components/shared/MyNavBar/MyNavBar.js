@@ -1,6 +1,15 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
+
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  Nav,
+  NavItem,
+} from 'reactstrap';
+
 import PropTypes from 'prop-types';
 
 import firebase from 'firebase/app';
@@ -9,6 +18,10 @@ import 'firebase/auth';
 import './MyNavBar.scss';
 
 class MyNavBar extends React.Component {
+  state = {
+    isOpen: false,
+  }
+
   static propTypes = {
     authed: PropTypes.bool,
   }
@@ -18,6 +31,10 @@ class MyNavBar extends React.Component {
     firebase.auth().signOut();
   }
 
+  toggleNav = () => {
+    this.setState({ isOpen: !this.state.isOpen });
+  }
+
   render() {
     const { authed, userStuff } = this.props;
     const userPath = this.props.userStuff.uid;
@@ -25,20 +42,20 @@ class MyNavBar extends React.Component {
     const buildNavBar = () => {
       if (authed) {
         return (
-        <ul className="navbar-nav ml-auto">
+        <Nav className="navbar-nav ml-auto">
           <div className="d-flex flex-row">
           <img className="userImg" src={userStuff.photoURL} alt="current user"/><p id={userStuff.uid} className="navFont profileBackground" to={`/achievements/${userPath}`}>Welcome, {userStuff.displayName}</p>
           </div>
-          <li className="nav-item">
+          <NavItem className="nav-item">
             <Link className="nav-link navFont btn btn-info" to="/posts/all">All Posts</Link>
-          </li>
-          <li className="nav-item">
+          </NavItem>
+          <NavItem className="nav-item">
             <Link className="nav-link navFont btn btn-info" to="/posts/create">Create Post</Link>
-          </li>
-          <li className="nav-item">
-            <button className="nav-link navFont btn btn-danger" onClick={this.logMeOut}>Logout</button>
-          </li>
-        </ul>
+          </NavItem>
+          <NavItem className="nav-item">
+            <Link className="nav-link navFont btn btn-danger" onClick={this.logMeOut}>Logout</Link>
+          </NavItem>
+        </Nav>
         );
       }
 
@@ -47,21 +64,19 @@ class MyNavBar extends React.Component {
 
     return (
       <div className="MyNavBar">
-                <nav className="navbar navbar-expand-lg">
-                  <div>
+                <Navbar color="light" light expand="md" className="navbar navbar-expand-lg">
+                  <NavItem>
               <Link className="navbar-brand btn btn-info removeMarginRight" to="/">writersResort</Link>
-              </div>
-              <div>
+              </NavItem>
+              <NavItem>
               <Link className="navbar-brand btn btn-info removeMarginRight" to="/about">About</Link>
-              </div>
-              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
+              </NavItem>
+              <NavbarToggler onClick={this.toggleNav} className="toggler" />
 
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <Collapse isOpen={this.state.isOpen} navbar>
           { buildNavBar() }
-          </div>
-        </nav>
+          </Collapse>
+        </Navbar>
       </div>
     );
   }

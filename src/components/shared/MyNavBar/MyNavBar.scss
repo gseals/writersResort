@@ -36,14 +36,21 @@ nav div {
 
   .navFont {
     font-size: 1.25rem;
+    color: black !important;
   }
 
   .profileBackground {
-    color: black;
-    background-color: white;
     font-weight: bold;
   }
 
 .removeMarginRight {
   margin-right: 0;
 }
+
+// @media (min-width: 855px) and (max-width: 1000px) {
+//   .collapse {
+//       display: none !important;
+//   }
+// }
+// fix this so that it works correctly
+
