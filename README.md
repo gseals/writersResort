@@ -24,45 +24,49 @@
 
 ## Description
 
+* Coming Soong!
+
 ## Application Features
+
+* Coming Soon!
 
 ## Screenshot
 
 Auth Page
-![Auth Page]()
+![Auth Page](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/auth.png)
 
 About Page
-![About Page]()
+![About Page](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/about.png)
 
 All Posts/Logged In Landing Page
-![All Posts/Logged In Landing Page]()
+![All Posts/Logged In Landing Page](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/AllPosts.png)
 
 Create Post
-![Create Post]()
+![Create Post](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/CreatePost.png)
 
 Create Post (alert for no text)
-![Create Post (alert for no text)]()
+![Create Post (alert for no text)](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/CreatePostNoText.png)
 
 Edit Post
-![Edit Post]()
+![Edit Post](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/EditPost.png)
 
 All Posts with updated Post
-![All Posts with updated Post]()
+![All Posts with updated Post](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/AllPostsUpdatedPost.png)
 
 Comments Page
-![Comments Page]()
+![Comments Page](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/CommentsPage.png)
 
 Comments (alert for no text)
-![Comments (alert for no text)]()
+![Comments (alert for no text)](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/CommentNoText.png)
 
 Adding Comment
-![Adding Comment]()
+![Adding Comment](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/NewComment.png)
 
 Comments with updated Comment Field
-![Comments with updated Comment Field]()
+![Comments with updated Comment Field](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/UpdateCommentTrigger.png)
 
 Comments with updated Comment
-![Comments with updated Comment]()
+![Comments with updated Comment](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/UpdatedComment.png)
 
 
 ##### Sources:
@@ -75,7 +79,7 @@ Comments with updated Comment
 
 * comment post it notes: [original](http://creative-punch.net/2014/02/create-css3-post-it-note/) [jsfiddle](https://jsfiddle.net/doug99collins/8v02zj5k/)
 
-* image on auth page: [unsplash](https://unsplash.com/photos/HzTJMkjctKE)
+* image on Auth page: [unsplash](https://unsplash.com/photos/HzTJMkjctKE)
 
 * notebook and key on About page: [unsplash](https://unsplash.com/photos/o9KNLaITFYw)
 
