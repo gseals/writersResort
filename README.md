@@ -1,74 +1,71 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# NSS Evening Cohort 10 Capstone: writersResort
 
-## Available Scripts
+## Requirements
 
-In the project directory, you can run:
+* React
+* CRUD using Firebase
+* Bootstrap
+* Github Projects for planning
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* HTML5
+* CSS3
+* JavaScript
+* Bootstrap
+* React.js
+* Reactstrap
+* Firebase
+* Moment.js
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Demo Link
 
-### `npm test`
+[writerResort](https://writersresort-97d54.firebaseapp.com/auth)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Description
 
-### `npm run build`
+## Application Features
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshot
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Auth Page
+![Auth Page]()
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+About Page
+![About Page]()
 
-### `npm run eject`
+All Posts/Logged In Landing Page
+![All Posts/Logged In Landing Page]()
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Create Post
+![Create Post]()
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Create Post (alert for no text)
+![Create Post (alert for no text)]()
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Edit Post
+![Edit Post]()
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+All Posts with updated Post
+![All Posts with updated Post]()
 
-## Learn More
+Comments Page
+![Comments Page]()
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Comments (alert for no text)
+![Comments (alert for no text)]()
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Adding Comment
+![Adding Comment]()
 
-### Code Splitting
+Comments with updated Comment Field
+![Comments with updated Comment Field]()
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Comments with updated Comment
+![Comments with updated Comment]()
 
 
-*** Sources:
+##### Sources:
 
 * typewriter on all pages: [unsplash](https://unsplash.com/photos/0gkw_9fy0eQ)
 
@@ -87,5 +84,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 * scattered paper in comments: [unsplash](https://unsplash.com/photos/aJTiW00qqtI)
 
 * brown paper on make comment: [unsplash](https://unsplash.com/photos/Y3vPEuNlf7w)
-
-this.match.params.userPath
