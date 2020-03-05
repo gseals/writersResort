@@ -20,17 +20,17 @@
 
 ## Demo Link
 
-[writerResort](https://writersresort-97d54.firebaseapp.com/auth)
+[Check out the Project](https://writersresort-97d54.firebaseapp.com/auth)
 
 ## Description
 
-* Coming Soong!
+* Coming Soon!
 
 ## Application Features
 
 * Coming Soon!
 
-## Screenshot
+## Screenshots
 
 Auth Page
 ![Auth Page](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/auth.png)
@@ -50,24 +50,33 @@ Create Post (alert for no text)
 Edit Post
 ![Edit Post](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/EditPost.png)
 
-All Posts with updated Post
+All Posts with updated Post ("Last updated" now appears on the updated Post)
 ![All Posts with updated Post](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/AllPostsUpdatedPost.png)
 
 Comments Page
 ![Comments Page](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/CommentsPage.png)
 
-Comments (alert for no text)
-![Comments (alert for no text)](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/CommentNoText.png)
-
-Adding Comment
+New Comment Added
 ![Adding Comment](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/NewComment.png)
 
-Comments with updated Comment Field
+Original Comment Field doubles as the Update Field
 ![Comments with updated Comment Field](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/UpdateCommentTrigger.png)
 
 Comments with updated Comment
 ![Comments with updated Comment](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/UpdatedComment.png)
 
+Comments (alert for no text)
+![Comments (alert for no text)](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/CommentNoText.png)
+
+## How to Run
+
+* Clone down this project from [GitHub](https://github.com/gseals/writersResort)
+* Install [http-server](https://www.npmjs.com/package/http-server) from npm.
+* In your browser, navigate to [https://localhost:3000/](https://localhost:3000/)
+
+## Contributors
+
+[Gabriel Seals](https://github.com/gseals)
 
 ##### Sources:
 
