@@ -84,7 +84,7 @@ class Update extends React.Component {
         <div className="quote-container note1">
         <i className="pin1"></i>
         <blockquote>
-        The clear you are with what you believe needs work, the better your reviewers can tailor their feedback.
+        The clearer you are with what you believe needs work, the better your reviewers can tailor their feedback.
         </blockquote>
       </div>
       <div className="quote-container note2">
