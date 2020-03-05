@@ -62,7 +62,7 @@ New Comment Added
 Original Comment Field doubles as the Update Field
 ![Comments with updated Comment Field](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/UpdateCommentTrigger.png)
 
-Comments with updated Comment
+Comments with updated Comment ("Comment updated" now appears on the updated Comment)
 ![Comments with updated Comment](https://raw.githubusercontent.com/gseals/writersResort/master/screenshots/UpdatedComment.png)
 
 Comments (alert for no text)
