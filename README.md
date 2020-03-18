@@ -1,5 +1,9 @@
 # NSS Evening Cohort 10 Capstone: writersResort
 
+## Demo Link
+
+[Check out the Project](https://writersresort-97d54.firebaseapp.com/auth)
+
 ## Requirements
 
 * React
@@ -9,26 +13,41 @@
 
 ## Technologies Used
 
-* HTML5
-* CSS3
-* JavaScript
-* Bootstrap
-* React.js
-* Reactstrap
-* Firebase
-* Moment.js
-
-## Demo Link
-
-[Check out the Project](https://writersresort-97d54.firebaseapp.com/auth)
+* [HTML5](https://html.spec.whatwg.org/multipage/)
+* [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
+* [JavaScript](https://www.javascript.com/)
+* [Bootstrap 4.4.1](https://getbootstrap.com/)
+* [SASS 4.13.1]()
+* [React.js 16.12.0](https://reactjs.org/docs/create-a-new-react-app.html)
+* [Reactstrap 8.4.1](https://reactstrap.github.io/)
+* [Firebase 7.7.0](https://firebase.google.com/)
+* [Moment.js 2.24.0](https://momentjs.com/)
+* [Axios 0.19.1](https://www.npmjs.com/package/axios)
 
 ## Description
 
-* Coming Soon!
+writersResort allows users to post poems and invite feedback on those poems. Each user has access to edit and delete their own posts or comments, via Axios calls. Each deleted post also deletes any comments associated with the post. Authentication occurs through Google and pulls user's displayURL and Google Username and each post/comment is stamped with the time it was created and updated.
 
 ## Application Features
 
-* Coming Soon!
+* Sign in with Google
+* Users VIEW all postings upon logging in
+* Each post bears its creator's Google displayURL
+* Posts and comments ordered by newest first
+
+### Users can
+
+### Posts
+* Create a new Post
+* View all Posts regardless of creator
+* Update a Post they created
+* Delete any Post they created
+
+### Comments
+* Create Comments on a post
+* View all Cmments regardless of creator
+* Update a Comment they created
+* Delete any Comment they created
 
 ## Screenshots
 
@@ -78,7 +97,7 @@ Comments (alert for no text)
 
 [Gabriel Seals](https://github.com/gseals)
 
-##### Sources:
+#### Sources:
 
 * typewriter on all pages: [unsplash](https://unsplash.com/photos/0gkw_9fy0eQ)
 
