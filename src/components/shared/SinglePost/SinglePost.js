@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import moment from 'moment';
 import postingShape from '../../../helpers/propz/postingShape';
 import authData from '../../../helpers/data/authData';
@@ -55,8 +56,12 @@ class SinglePost extends React.Component {
           <Link className="btn btn-primary" to={`/posts/${postPathId}/feedback`}>See Full Post</Link>
           {
             (post.uid === authData.getUid()) && <div>
-          <button className="btn btn-danger" onClick={this.handleDeletePostEvent}>X</button>
-          <Link className="btn btn-success" to={`/posts/${postPathId}/update`}>Edit</Link>
+          <button className="btn btn-danger" onClick={this.handleDeletePostEvent}>
+            <FontAwesomeIcon className="faiconsTrash" icon="trash"/>
+          </button>
+          <Link className="btn btn-success" to={`/posts/${postPathId}/update`}>
+            <FontAwesomeIcon className="faiconsPencil" icon="pencil-alt"/>
+          </Link>
           </div>
           }
           <p>Post created: {moment(post.date).format('l')}</p>

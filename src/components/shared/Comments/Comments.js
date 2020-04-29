@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import commentShape from '../../../helpers/propz/commentShape';
 import authData from '../../../helpers/data/authData';
 
@@ -34,8 +35,12 @@ class Comments extends React.Component {
             <h3 className="card-title">{comment.content}</h3>
             {
             (comment.uid === authData.getUid()) && <div>
-              <button className="btn btn-danger" onClick={this.handleDeleteCommentEvent}>X</button>
-              <button className="btn btn-primary"onClick={this.handleEditFunction}>Edit</button>
+              <button className="btn btn-danger" onClick={this.handleDeleteCommentEvent}>
+                <FontAwesomeIcon className="faiconsTrash" icon="trash"/>
+                </button>
+              <button className="btn btn-primary"onClick={this.handleEditFunction}>
+                <FontAwesomeIcon className="faiconsPencil" icon="pencil-alt"/>
+              </button>
             </div>
             }
             <p>Comment created: {moment(comment.date).format('l')}</p>

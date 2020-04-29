@@ -2,6 +2,8 @@ import React from 'react';
 import {
   BrowserRouter as Router, Route, Redirect, Switch,
 } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faTrash, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 import './App.scss';
 
 import firebase from 'firebase/app';
@@ -30,6 +32,8 @@ const PrivateRoute = ({ component: Component, authed, ...rest }) => {
 };
 
 firebaseConnection();
+
+library.add(faTrash, faPencilAlt);
 
 class App extends React.Component {
   state = {
