@@ -1,4 +1,5 @@
 import React from 'react';
+import FlipMove from 'react-flip-move';
 import moment from 'moment';
 import commentData from '../../../helpers/data/commentData';
 import postingData from '../../../helpers/data/postingData';
@@ -149,8 +150,10 @@ class Feedback extends React.Component {
         </div>
         <div className="comments col scrollInDiv">
           <h2 className="textColor">Comments</h2>
+          <FlipMove duration={500} easing="ease-in-out">
           { this.state.comments.map((comment) => <Comments key={comment.id} comment={comment} deleteCommentComponent={this.deleteCommentComponent} editCommentFunctionInShared={this.editCommentFunctionInShared}/>)}
-        </div>
+          </FlipMove>
+          </div>
         <div className="col">
           <div className="commentMakerBackground">
           <h2>What do you think?</h2>
