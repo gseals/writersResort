@@ -20,6 +20,7 @@
 * [SASS 4.13.1]()
 * [React.js 16.12.0](https://reactjs.org/docs/create-a-new-react-app.html)
 * [Reactstrap 8.4.1](https://reactstrap.github.io/)
+* [React Flip Move 3.0.4](https://www.npmjs.com/package/react-flip-move)
 * [Firebase 7.7.0](https://firebase.google.com/)
 * [Moment.js 2.24.0](https://momentjs.com/)
 * [Axios 0.19.1](https://www.npmjs.com/package/axios)
