@@ -17,7 +17,7 @@
 * [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
 * [JavaScript](https://www.javascript.com/)
 * [Bootstrap 4.4.1](https://getbootstrap.com/)
-* [SASS 4.13.1]()
+* [SASS 4.13.1](https://sass-lang.com/)
 * [React.js 16.12.0](https://reactjs.org/docs/create-a-new-react-app.html)
 * [Reactstrap 8.4.1](https://reactstrap.github.io/)
 * [React Flip Move 3.0.4](https://www.npmjs.com/package/react-flip-move)
