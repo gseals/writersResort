@@ -24,6 +24,7 @@
 * [Firebase 7.7.0](https://firebase.google.com/)
 * [Moment.js 2.24.0](https://momentjs.com/)
 * [Axios 0.19.1](https://www.npmjs.com/package/axios)
+* [ESLint 14.0.0](https://eslint.org/)
 
 ## Description
 
