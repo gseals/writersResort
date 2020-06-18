@@ -13,18 +13,24 @@
 
 ## Technologies Used
 
-* [HTML5](https://html.spec.whatwg.org/multipage/)
-* [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
-* [JavaScript](https://www.javascript.com/)
-* [Bootstrap 4.4.1](https://getbootstrap.com/)
-* [SASS 4.13.1](https://sass-lang.com/)
-* [React.js 16.12.0](https://reactjs.org/docs/create-a-new-react-app.html)
-* [Reactstrap 8.4.1](https://reactstrap.github.io/)
-* [React Flip Move 3.0.4](https://www.npmjs.com/package/react-flip-move)
-* [Firebase 7.7.0](https://firebase.google.com/)
-* [Moment.js 2.24.0](https://momentjs.com/)
 * [Axios 0.19.1](https://www.npmjs.com/package/axios)
+* [Bootstrap 4.4.1](https://getbootstrap.com/)
+* [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
 * [ESLint 14.0.0](https://eslint.org/)
+* [Firebase 7.7.0](https://firebase.google.com/)
+* [Fontawesome-svg-core 1.2.28](https://www.npmjs.com/package/@fortawesome/fontawesome-svg-core)
+* [HTML5](https://html.spec.whatwg.org/multipage/)
+* [JavaScript](https://www.javascript.com/)
+* [Moment.js 2.24.0](https://momentjs.com/)
+* [Prop-Types 15.7.2](https://www.npmjs.com/package/prop-types)
+* [React.js 16.12.0](https://reactjs.org/docs/create-a-new-react-app.html)
+* [ReactDOM 16.12.0](https://www.npmjs.com/package/react-dom)
+* [React Flip Move 3.0.4](https://www.npmjs.com/package/react-flip-move)
+* [React-fontawesome 0.1.9](https://www.npmjs.com/package/react-fontawesome)
+* [React Router DOM 5.1.2](https://www.npmjs.com/package/react-router-dom)
+* [Reactstrap 8.4.1](https://reactstrap.github.io/)
+* [SASS 4.13.1](https://sass-lang.com/)
+
 
 ## Description
 
