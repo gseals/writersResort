@@ -29,7 +29,7 @@
 * [React-fontawesome 0.1.9](https://www.npmjs.com/package/react-fontawesome)
 * [React Router DOM 5.1.2](https://www.npmjs.com/package/react-router-dom)
 * [Reactstrap 8.4.1](https://reactstrap.github.io/)
-* [SASS 4.13.1](https://sass-lang.com/)
+* [SCSS 4.13.1](https://sass-lang.com/)
 
 
 ## Description
