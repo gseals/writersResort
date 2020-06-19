@@ -23,7 +23,7 @@
 * [JavaScript](https://www.javascript.com/)
 * [Moment.js 2.24.0](https://momentjs.com/)
 * [Prop-Types 15.7.2](https://www.npmjs.com/package/prop-types)
-* [React.js 16.12.0](https://reactjs.org/docs/create-a-new-react-app.html)
+* [ReactJS 16.12.0](https://reactjs.org/docs/create-a-new-react-app.html)
 * [ReactDOM 16.12.0](https://www.npmjs.com/package/react-dom)
 * [React Flip Move 3.0.4](https://www.npmjs.com/package/react-flip-move)
 * [React-fontawesome 0.1.9](https://www.npmjs.com/package/react-fontawesome)
