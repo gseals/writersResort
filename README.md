@@ -1,5 +1,9 @@
 # NSS Evening Cohort 10 Capstone: writersResort
 
+## Description
+
+* writersResort allows users to post poems and invite feedback on those poems. Each user has access to edit and delete their own posts or comments, via Axios calls. Each deleted post also deletes any comments associated with the post. Authentication occurs through Google and pulls user's displayURL and Google Username. Each post/comment is stamped with the time it was created and updated.
+
 ## Demo Link
 
 [Check out the Project](https://writersresort-97d54.firebaseapp.com/auth)
@@ -30,11 +34,6 @@
 * [React Router DOM 5.1.2](https://www.npmjs.com/package/react-router-dom)
 * [Reactstrap 8.4.1](https://reactstrap.github.io/)
 * [SCSS 4.13.1](https://sass-lang.com/)
-
-
-## Description
-
-* writersResort allows users to post poems and invite feedback on those poems. Each user has access to edit and delete their own posts or comments, via Axios calls. Each deleted post also deletes any comments associated with the post. Authentication occurs through Google and pulls user's displayURL and Google Username. Each post/comment is stamped with the time it was created and updated.
 
 ## Application Features
 
