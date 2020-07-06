@@ -34,7 +34,7 @@
 
 ## Description
 
-* writersResort allows users to post poems and invite feedback on those poems. Each user has access to edit and delete their own posts or comments, via Axios calls. Each deleted post also deletes any comments associated with the post. Authentication occurs through Google and pulls user's displayURL and Google Username and each post/comment is stamped with the time it was created and updated.
+* writersResort allows users to post poems and invite feedback on those poems. Each user has access to edit and delete their own posts or comments, via Axios calls. Each deleted post also deletes any comments associated with the post. Authentication occurs through Google and pulls user's displayURL and Google Username. Each post/comment is stamped with the time it was created and updated.
 
 ## Application Features
 
